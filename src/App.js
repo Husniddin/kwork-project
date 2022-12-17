@@ -1,24 +1,77 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Container } from "./component/styled/Container.styled";
+import {
+  Navbar,
+  FlexBox,
+  LinkWrapp,
+  Payment,
+  ViseCard,
+} from "./component/styled/Navbar.styled";
+import { NavLink } from "react-router-dom";
+import visa from "./images/visa.png";
+import master from "./images/master.png";
+import bitcoin from "./images/bitcoin.png";
 function App() {
+  const links = [
+    {
+      page: "Home",
+      url: "/",
+    },
+    {
+      page: "Cars",
+      url: "/car",
+    },
+    {
+      page: "Countries",
+      url: "/country",
+    },
+    {
+      page: "Brands",
+      url: "/brand",
+    },
+    {
+      page: "Services",
+      url: "/sevice",
+    },
+    {
+      page: "About Us",
+      url: "/about",
+    },
+    {
+      page: "FAQ",
+      url: "/faq",
+    },
+    {
+      page: "Contacts",
+      url: "/contact",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Navbar bg="#000">
+      <Container>
+        <FlexBox>
+          <LinkWrapp>
+            {links.map((item, i) => {
+              return (
+                <NavLink
+                  to={item.url}
+                  key={i}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  {item.page}
+                </NavLink>
+              );
+            })}
+          </LinkWrapp>
+          <Payment>
+            <h3>Payment methods</h3>
+            <ViseCard src={visa} alt="visa" />
+            <ViseCard src={master} alt="visa" />
+            <ViseCard src={bitcoin} alt="visa" />
+          </Payment>
+        </FlexBox>
+      </Container>
+    </Navbar>
   );
 }
 
