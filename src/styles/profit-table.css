@@ -1,0 +1,6 @@
+.profit__table th:nth-child(1) {
+  border-top-left-radius: 4px !important;
+}
+.profit__table th:last-child {
+  border-top-right-radius: 4px !important;
+}

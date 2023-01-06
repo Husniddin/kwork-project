@@ -1,0 +1,69 @@
+.grid__system {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+.grid__item {
+  border: 1px solid red;
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 25px;
+}
+.item1 {
+  grid-column: 1/9;
+}
+.item2 {
+  grid-column: 9/13;
+}
+.item3 {
+  grid-column: 1/5;
+}
+.item4 {
+  grid-column: 5/13;
+}
+.item5,
+.item8,
+.item11,
+.item14,
+.item17,
+.item20 {
+  grid-column: 1/5;
+}
+.item6,
+.item9,
+.item12,
+.item15,
+.item18,
+.item21 {
+  grid-column: 5/9;
+}
+.item7,
+.item10,
+.item13,
+.item16,
+.item19,
+.item22 {
+  grid-column: 9/13;
+}
+.item1__right__side {
+  position: relative;
+}
+.item1__right__side::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #e8efff;
+  position: absolute;
+  top: 0;
+  left: -31px;
+  display: block;
+}
+.item1__right__side .overwiew__wrapper:nth-child(3) {
+  margin-bottom: 42.46px;
+}
+.item2 .apexcharts-legend {
+  position: absolute;
+  left: 0;
+  bottom: 0 !important;
+}
