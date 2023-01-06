@@ -2,9 +2,6 @@ import logo from "../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import BaseButton from "./BaseButton";
 const Navbar = () => {
-  const handler = () => {
-    alert("Hi");
-  };
   return (
     <nav className="py-[30px]">
       <div className="container">
@@ -14,40 +11,40 @@ const Navbar = () => {
           </div>
           <ul className="flex items-center gap-[85px]">
             <li>
-              <a
-                href="/market"
+              <NavLink
+                to="/market"
                 className="text-base text-black font-medium leading-[19px]"
               >
                 Markets
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/screen"
+              <NavLink
+                to="/screen"
                 className="text-base text-black font-medium leading-[19px]"
               >
                 Screener
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/portfolio"
+              <NavLink
+                to="/portfolio"
                 className="text-base text-black font-medium leading-[19px]"
               >
                 Portfolio
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/pro"
+              <NavLink
+                to="/pro"
                 className="text-base text-black font-medium leading-[19px]"
               >
                 Pro
-              </a>
+              </NavLink>
             </li>
           </ul>
           <div className="flex items-center gap-[15px]">
-            <BaseButton context="Sign in" onClick="handler" />
+            <BaseButton context="Sign in" />
             <BaseButton context="Sign up" />
           </div>
         </div>
