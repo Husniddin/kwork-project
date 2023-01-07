@@ -133,7 +133,7 @@ const ColsTable = () => {
             >
               Weighted average score
             </td>
-            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px]">
+            <td className="text-center text-white font-bold text-xs leading-[14px] py-4 px-[10px] bg-[#FF7A49]">
               8.3
             </td>
           </tr>

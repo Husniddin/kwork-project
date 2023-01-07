@@ -1,42 +1,57 @@
-const info = {
+const estimedData = {
+  series: [
+    {
+      name: "Strong sell",
+      data: [100, 90, 90, 30],
+      color: "#006B3D",
+    },
+    {
+      name: "Sell",
+      data: [140, 120, 150, 70],
+      color: "#3CDA73",
+    },
+    {
+      name: "Hold",
+      data: [80, 120, 130, 130],
+      color: "#FFCA2D",
+    },
+    {
+      name: "Buy",
+      data: [0, 50, 30, 20],
+      color: "#FF7A49",
+    },
+    {
+      name: "Strong buy",
+      data: [0, 20, 10, 0],
+      color: "#D3212C",
+    },
+  ],
   options: {
     chart: {
-      id: "basic-bar",
+      stacked: true,
+      // stackType: "100%",
       toolbar: {
         show: false,
       },
     },
+    plotOptions: {
+      bar: {
+        borderRadius: 3,
+        columnWidth: "40%",
+      },
+    },
     xaxis: {
-      categories: [
-        "9.29.2019",
-        "9.29.2020",
-        "9.29.2021",
-        "9.29.2021",
-        "9.29.2022",
-      ],
+      categories: ["Sep 22", "Oct 22", "Now 22", "Dec 22"],
     },
     yaxis: [
       {
-        axisTicks: {
-          show: false,
-        },
-
         labels: {
           formatter: (val) => {
-            return `${val / 100}`;
+            return `${(val * 2) / 100}`;
           },
           style: {
             colors: "#02EFBA",
           },
-        },
-        title: {
-          text: "",
-          style: {
-            color: "#008FFB",
-          },
-        },
-        tooltip: {
-          enabled: false,
         },
       },
     ],
@@ -58,7 +73,7 @@ const info = {
         radius: 5,
       },
       itemMargin: {
-        horizontal: 20,
+        horizontal: 18,
         vertical: 10,
       },
       onItemClick: {
@@ -69,23 +84,6 @@ const info = {
       },
     },
   },
-  series: [
-    {
-      name: "Gross margin",
-      data: [210, 240, 245, 250, 149],
-      color: "#3A9FF6",
-    },
-    {
-      name: "Operating margin",
-      data: [30, 50, 15, 60, 600],
-      color: "#02EFBA",
-    },
-    {
-      name: "Net margin",
-      data: [300, 150, 390, 300, 191],
-      color: "#FF7A49",
-    },
-  ],
-  type: "line",
 };
-export default info;
+
+export default estimedData;

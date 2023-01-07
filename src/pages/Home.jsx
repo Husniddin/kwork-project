@@ -9,6 +9,7 @@ import Table from "../component/tables/Table";
 import { FiPlusCircle } from "react-icons/fi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IconContext } from "react-icons";
+import ColsTable from "../component/tables/ColspanTable";
 // static data
 import tableBody from "../static/finance-table";
 import tableData from "../static/table-data";
@@ -20,8 +21,7 @@ import overView from "../static/over-view";
 import chartImg from "../assets/chart-img.png";
 import rotioData from "../static/rotio";
 import marginRatio from "../static/margin-ratio";
-import ColsTable from "../component/tables/ColspanTable";
-
+import estimedData from "../static/estimed";
 const Home = () => {
   return (
     <section className="pt-2">
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
         <HeaderNav />
         <div className="grid__system overflow-hidden">
-          <div className="item1 grid__item">
+          <div className="item1 grid__item px-[25px]">
             <CardTitle title="About the company" />
             <div className="flex gap-[50px] mt-[25px] ">
               <p className="w-[50%]">
@@ -81,9 +81,11 @@ const Home = () => {
             </div>
           </div>
           {/* end of item1 */}
-          <div className="item2 grid__item">
-            <CardTitle title="REVENUE BREAKDOWN" />
-            <div className="mt-[25px]">
+          <div className="item2 grid__item px-[25px]">
+            <div className="px-[25px]">
+              <CardTitle title="REVENUE BREAKDOWN" />
+            </div>
+            <div className="mt-[25px] pl-1">
               <ChartComponent
                 series={circleChart.series}
                 type="donut"
@@ -93,7 +95,7 @@ const Home = () => {
             </div>
           </div>
           {/* end of item2 */}
-          <div className="item3 grid__item">
+          <div className="item3 grid__item px-[25px]">
             <CardTitle title="Overview" />
             <div className="mt-[33px]">
               {overView.map((item) => (
@@ -104,26 +106,26 @@ const Home = () => {
             </div>
           </div>
           {/* end of item3 */}
-          <div className="item4 grid__item">
+          <div className="item4 grid__item px-[25px]">
             <div className="mb-[15px]">
               <CardTitle title="Chart" />
             </div>
             <img src={chartImg} alt="chart img" className="h-[90%]" />
           </div>
           {/* end of item4 */}
-          <div className="item5 grid__item">
+          <div className="item5 grid__item px-[25px]">
             <CardTitle title="OVERALL SCORE" />
           </div>
           {/* end of item5 */}
-          <div className="item6 grid__item">
+          <div className="item6 grid__item px-[25px]">
             <CardTitle title="Octagon view" />
           </div>
           {/* end of item6 */}
-          <div className="item7 grid__item">
+          <div className="item7 grid__item px-[25px]">
             <CardTitle title="strength & weakness" />
           </div>
           {/* end of item7 */}
-          <div className="item8 grid__item">
+          <div className="item8 grid__item px-[25px]">
             <CardTitle title="FINANCIAL STRENGTH" />
             <div className="mt-11">
               <FinanceTable
@@ -135,8 +137,10 @@ const Home = () => {
           </div>
           {/* end of item8 */}
           <div className="item9 grid__item">
-            <CardTitle title="Debt to Assets" />
-            <div className=" mt-10">
+            <div className="px-[25px]">
+              <CardTitle title="Debt to Assets" />
+            </div>
+            <div className=" mt-10 pl-1">
               <ChartComponent
                 options={money.options}
                 series={money.series}
@@ -146,8 +150,10 @@ const Home = () => {
             </div>
           </div>
           <div className="item10 grid__item">
-            <CardTitle title="Current ratio" />
-            <div className=" mt-10">
+            <div className="px-[25px]">
+              <CardTitle title="Current ratio" />
+            </div>
+            <div className=" mt-10 pl-1">
               <ChartComponent
                 options={rotioData.options}
                 series={rotioData.series}
@@ -156,7 +162,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item11 grid__item">
+          <div className="item11 grid__item px-[25px]">
             <div className="flex items-center justify-between">
               <CardTitle title="Current ratio" />
               <div>
@@ -193,14 +199,14 @@ const Home = () => {
             />
           </div>
           {/* end of item11 */}
-          <div className="item12 grid__item">
+          <div className="item12 grid__item px-[25px]">
             <CardTitle title="Revenue & Net income" />
           </div>
           {/* end of item12 */}
           <div className="item13 grid__item">
             <CardTitle title="Cash flow" />
           </div>
-          <div className="item14 grid__item">
+          <div className="item14 grid__item px-[25px]">
             <CardTitle title="PROFITABILITY" />
             <div className="mt-11">
               <FinanceTable
@@ -211,8 +217,10 @@ const Home = () => {
             </div>
           </div>
           <div className="item15 grid__item">
-            <CardTitle title="MARGIN RATIOS" />
-            <div className=" mt-10">
+            <div className="px-[25px]">
+              <CardTitle title="MARGIN RATIOS" />
+            </div>
+            <div className=" mt-10 pl-1">
               <ChartComponent
                 options={info.options}
                 series={info.series}
@@ -221,10 +229,10 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item16 grid__item">
+          <div className="item16 grid__item px-[25px]">
             <CardTitle title="NET MARGIN" />
           </div>
-          <div className="item17 grid__item">
+          <div className="item17 grid__item px-[25px]">
             <CardTitle title="EFFECTIVENESS" />
             <div className="mt-11">
               <FinanceTable
@@ -234,7 +242,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item18 grid__item">
+          <div className="item18 grid__item px-[25px]">
             <CardTitle title="GROWTH" />
             <div className="mt-11">
               <FinanceTable
@@ -244,26 +252,40 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item19 grid__item">
+          <div className="item19 grid__item px-[25px]">
             <CardTitle title="Growth rate vs. Industry" />
           </div>
-          <div className="item20 grid__item">
+          <div className="item20 grid__item px-[25px]">
             <CardTitle title="FORECAST" />
-            <div>
+            <div className="mt-11">
               <ColsTable />
             </div>
           </div>
-          <div className="item21 grid__item">21</div>
-          <div className="item22 grid__item">22</div>
+          <div className="item21 grid__item px-[25px]">
+            <CardTitle title="Estimated EPS vs. Actual EPS" />
+          </div>
+          <div className="item22 grid__item">
+            <div className="ml-[25px]">
+              <CardTitle title="Analyst rating" />
+            </div>
+            <div className="mt-11 px-1">
+              <ChartComponent
+                options={estimedData.options}
+                series={estimedData.series}
+                type="bar"
+                width="420"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      <ChartComponent
-        options={info.options}
-        series={info.series}
-        type={info.type}
+      {/* <ChartComponent
+        options={estimedData.options}
+        series={estimedData.series}
+        type="bar"
         width="500"
-      />
+      /> */}
     </section>
   );
 };

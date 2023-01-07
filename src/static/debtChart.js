@@ -36,7 +36,7 @@ const money = {
     },
 
     xaxis: {
-      categories: ["09.29.2019", "09.29.2020", "09.29.2021", "09.29.2021"],
+      categories: ["9.29.2019", "9.29.2020", "9.29.2021", "9.29.2021"],
     },
     yaxis: [
       {
@@ -98,7 +98,7 @@ const money = {
       x: { show: false },
       fixed: {
         enabled: false,
-        position: "topLeft", // topRight, topLeft, bottomRight, bottomLeft
+        position: "topLeft",
         offsetY: 30,
         offsetX: 60,
       },

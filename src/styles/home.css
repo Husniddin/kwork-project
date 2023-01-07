@@ -7,7 +7,7 @@
 .grid__item {
   background: #fff;
   border-radius: 8px;
-  padding: 30px 25px;
+  padding: 30px 0;
   overflow: hidden;
 }
 .item1 {
