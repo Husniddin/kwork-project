@@ -140,7 +140,6 @@ const Home = () => {
               <ChartComponent
                 options={money.options}
                 series={money.series}
-                type="line"
                 height={800}
                 width={470}
               />
@@ -152,7 +151,6 @@ const Home = () => {
               <ChartComponent
                 options={rotioData.options}
                 series={rotioData.series}
-                // type="line"
                 height={800}
                 width={470}
               />
@@ -216,10 +214,10 @@ const Home = () => {
             <CardTitle title="MARGIN RATIOS" />
             <div className=" mt-10">
               <ChartComponent
-                options={marginRatio.options}
-                series={marginRatio.series}
+                options={info.options}
+                series={info.series}
                 height={800}
-                width={450}
+                width={420}
               />
             </div>
           </div>
@@ -260,13 +258,12 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 
       <ChartComponent
         options={info.options}
         series={info.series}
         type={info.type}
         width="500"
-      /> */}
+      />
     </section>
   );
 };
