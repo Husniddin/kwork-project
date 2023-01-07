@@ -1,23 +1,23 @@
-const money = {
+const marginRatio = {
+  chart: {
+    height: 500,
+    width: "100%",
+  },
   series: [
     {
-      name: "Total Assets",
-      type: "column",
-      data: [740, 426, 613, 415],
-      color: "#3A9FF6",
-      marginLeft: "10px",
-    },
-    {
-      name: "Debt to Assets",
-      type: "column",
-      data: [934, 740, 421, 240],
-      color: "#02EFBA",
-    },
-    {
-      name: "Total Debt",
+      name: "Series 1",
+      data: [45, 52, 38, 415, 222, 33],
       type: "line",
-      data: [0.5, 1, 1.5, 2],
-      color: "#FF7A49",
+    },
+    {
+      name: "Series 1",
+      data: [45, 2, 38, 45, 19, 33],
+      type: "line",
+    },
+    {
+      name: "Series 1",
+      data: [45, 552, 38, 45, 19, 33],
+      type: "line",
     },
   ],
   options: {
@@ -46,7 +46,7 @@ const money = {
 
         labels: {
           formatter: (val) => {
-            return `${val / 100}`;
+            return `${val / 1}`;
           },
           style: {
             colors: "#02EFBA",
@@ -60,37 +60,6 @@ const money = {
         },
         tooltip: {
           enabled: false,
-        },
-      },
-      {
-        seriesName: "Total Assets",
-        opposite: true,
-        axisTicks: {
-          show: false,
-        },
-        axisBorder: {
-          show: false,
-        },
-        labels: {
-          formatter: (val) => {
-            return `${""}`;
-          },
-        },
-      },
-      {
-        seriesName: "Total Debt",
-        opposite: true,
-        axisTicks: {
-          show: false,
-        },
-
-        labels: {
-          formatter: (val) => {
-            return `${""}`;
-          },
-          style: {
-            colors: "#fff",
-          },
         },
       },
     ],
@@ -134,5 +103,4 @@ const money = {
     },
   },
 };
-
-export default money;
+export default marginRatio;

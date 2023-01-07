@@ -1,4 +1,4 @@
-import "../styles/profit-table.css";
+import "../../styles/profit-table.css";
 const Table = (props) => {
   return (
     <table>

@@ -1,4 +1,4 @@
-import "../styles/finance-table.css";
+import "../../styles/finance-table.css";
 
 const FinanceTable = (props) => {
   return (
@@ -37,38 +37,19 @@ const FinanceTable = (props) => {
         ))}
       </tbody>
       <tfoot>
-        <td
-          colSpan="4"
-          className="table__footer text-textDarkBlack font-normal text-xs leading-[14px] py-4 text-center"
-        >
-          {props.table__footer.title}
-        </td>
-        <td className="py-4 text-white font-semibold text-xs leading-[14px]  text-center bg-[#3CDA73]">
-          {props.table__footer.allScore}
-        </td>
+        <tr>
+          <td
+            colSpan="4"
+            className="table__footer text-textDarkBlack font-normal text-xs leading-[14px] py-4 text-center"
+          >
+            {props.table__footer.title}
+          </td>
+          <td className="py-4 text-white font-semibold text-xs leading-[14px]  text-center bg-[#3CDA73]">
+            {props.table__footer.allScore}
+          </td>
+        </tr>
       </tfoot>
     </table>
   );
 };
 export default FinanceTable;
-
-{
-  /* <div className="">
-<div className="flex table__header bg-lightBlue rounded-t-[4px] overflow-hidden">
-  {props.table_header.map((item, i) => (
-    <div key={i}>{item}</div>
-  ))}
-</div>
-{props.table_body.map((item, i) => (
-  <ul className="flex">
-    <li className="py-4 px-4 border">{item.name}</li>
-    <li>{item.ratio}</li>
-    <li>{item.industry}</li>
-    <li>
-      <img src={item.trend} alt="trend" />
-    </li>
-    <li>{item.score}</li>
-  </ul>
-))}
-</div> */
-}

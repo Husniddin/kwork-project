@@ -1,19 +1,27 @@
-import CardTitle from "../component/CardTitle";
-import FinanceTable from "../component/FinanceTable";
-import HeaderNav from "../component/HeaderNav";
-import OverView from "../component/OverView";
+import "../styles/home.css";
+// components
+import CardTitle from "../component/cart-title/CardTitle";
+import FinanceTable from "../component/tables/FinanceTable";
+import HeaderNav from "../component/navbar/HeaderNav";
+import OverView from "../component/view-list/OverView";
+import ChartComponent from "../charts/ChartComponent";
+import Table from "../component/tables/Table";
+import { FiPlusCircle } from "react-icons/fi";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { IconContext } from "react-icons";
+// static data
 import tableBody from "../static/finance-table";
 import tableData from "../static/table-data";
-import "../styles/home.css";
-import ChartComponent from "../charts/ChartComponent";
-import ChartWrapper from "../component/ChartWrapp";
-import Table from "../component/Table";
-import info from "../static/barChart";
-import circleChart from "../static/donutChart";
 import money from "../static/debtChart";
+import info from "../static/barChart";
 import companyData from "../static/companyData";
-import { FiPlusCircle } from "react-icons/fi";
-import { IconContext } from "react-icons";
+import circleChart from "../static/donutChart";
+import overView from "../static/over-view";
+import chartImg from "../assets/chart-img.png";
+import rotioData from "../static/rotio";
+import marginRatio from "../static/margin-ratio";
+import ColsTable from "../component/tables/ColspanTable";
+
 const Home = () => {
   return (
     <section className="pt-2">
@@ -45,7 +53,7 @@ const Home = () => {
           </p>
         </div>
         <HeaderNav />
-        <div className="grid__system">
+        <div className="grid__system overflow-hidden">
           <div className="item1 grid__item">
             <CardTitle title="About the company" />
             <div className="flex gap-[50px] mt-[25px] ">
@@ -65,11 +73,9 @@ const Home = () => {
               </p>
               <div className="item1__right__side w-[50%] pt-7">
                 {companyData.map((item) => (
-                  <OverView
-                    text={item.title}
-                    quantity={item.name}
-                    key={item.id}
-                  />
+                  <div key={item.id}>
+                    <OverView text={item.title} quantity={item.name} />
+                  </div>
                 ))}
               </div>
             </div>
@@ -87,24 +93,168 @@ const Home = () => {
             </div>
           </div>
           {/* end of item2 */}
-          <div className="item3 grid__item">3</div>
-          <div className="item4 grid__item">4</div>
-          <div className="item5 grid__item">5</div>
-          <div className="item6 grid__item">6</div>
-          <div className="item7 grid__item">7</div>
-          <div className="item8 grid__item">8</div>
-          <div className="item9 grid__item">9</div>
-          <div className="item10 grid__item">10</div>
-          <div className="item11 grid__item">11</div>
-          <div className="item12 grid__item">12</div>
-          <div className="item13 grid__item">13</div>
-          <div className="item14 grid__item">14</div>
-          <div className="item15 grid__item">15</div>
-          <div className="item16 grid__item">16</div>
-          <div className="item17 grid__item">17</div>
-          <div className="item18 grid__item">18</div>
-          <div className="item19 grid__item">19</div>
-          <div className="item20 grid__item">20</div>
+          <div className="item3 grid__item">
+            <CardTitle title="Overview" />
+            <div className="mt-[33px]">
+              {overView.map((item) => (
+                <div key={item.id}>
+                  <OverView text={item.name} quantity={item.data} />
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* end of item3 */}
+          <div className="item4 grid__item">
+            <div className="mb-[15px]">
+              <CardTitle title="Chart" />
+            </div>
+            <img src={chartImg} alt="chart img" className="h-[90%]" />
+          </div>
+          {/* end of item4 */}
+          <div className="item5 grid__item">
+            <CardTitle title="OVERALL SCORE" />
+          </div>
+          {/* end of item5 */}
+          <div className="item6 grid__item">
+            <CardTitle title="Octagon view" />
+          </div>
+          {/* end of item6 */}
+          <div className="item7 grid__item">
+            <CardTitle title="strength & weakness" />
+          </div>
+          {/* end of item7 */}
+          <div className="item8 grid__item">
+            <CardTitle title="FINANCIAL STRENGTH" />
+            <div className="mt-11">
+              <FinanceTable
+                table_header={tableBody.table_head}
+                table_body={tableBody.table_body}
+                table__footer={tableBody.table_footer}
+              />
+            </div>
+          </div>
+          {/* end of item8 */}
+          <div className="item9 grid__item">
+            <CardTitle title="Debt to Assets" />
+            <div className=" mt-10">
+              <ChartComponent
+                options={money.options}
+                series={money.series}
+                type="line"
+                height={800}
+                width={470}
+              />
+            </div>
+          </div>
+          <div className="item10 grid__item">
+            <CardTitle title="Current ratio" />
+            <div className=" mt-10">
+              <ChartComponent
+                options={rotioData.options}
+                series={rotioData.series}
+                // type="line"
+                height={800}
+                width={470}
+              />
+            </div>
+          </div>
+          <div className="item11 grid__item">
+            <div className="flex items-center justify-between">
+              <CardTitle title="Current ratio" />
+              <div>
+                <button className="text-[10px] leading-[15px]">
+                  Annual /{" "}
+                </button>
+                <button className="text-[10px] leading-[15px]">
+                  {" "}
+                  Quarterly
+                </button>
+              </div>
+            </div>
+            <div className="mt-0.5 mb-[35px]">
+              <ul className="flex items-center gap-1">
+                <li className="text-[10px] leading-[15px] text-[#746FF2] cursor-pointer">
+                  Income statement |{" "}
+                </li>
+                <li className="text-[10px] leading-[15px] text-[#746FF2] cursor-pointer">
+                  Balance sheet |
+                </li>
+                <li className="text-[10px] leading-[15px] text-[#746FF2] cursor-pointer">
+                  {" "}
+                  Cash flow
+                </li>
+                <li className="cursor-pointer">
+                  <MdKeyboardArrowRight color="#3A9FF6" size={18} />
+                </li>
+              </ul>
+            </div>
+            {/* end of tab header*/}
+            <Table
+              table_header={tableData.table_header}
+              table_body={tableData.tabel_body}
+            />
+          </div>
+          {/* end of item11 */}
+          <div className="item12 grid__item">
+            <CardTitle title="Revenue & Net income" />
+          </div>
+          {/* end of item12 */}
+          <div className="item13 grid__item">
+            <CardTitle title="Cash flow" />
+          </div>
+          <div className="item14 grid__item">
+            <CardTitle title="PROFITABILITY" />
+            <div className="mt-11">
+              <FinanceTable
+                table_header={tableBody.table_head}
+                table_body={tableBody.table_body}
+                table__footer={tableBody.table_footer}
+              />
+            </div>
+          </div>
+          <div className="item15 grid__item">
+            <CardTitle title="MARGIN RATIOS" />
+            <div className=" mt-10">
+              <ChartComponent
+                options={marginRatio.options}
+                series={marginRatio.series}
+                height={800}
+                width={450}
+              />
+            </div>
+          </div>
+          <div className="item16 grid__item">
+            <CardTitle title="NET MARGIN" />
+          </div>
+          <div className="item17 grid__item">
+            <CardTitle title="EFFECTIVENESS" />
+            <div className="mt-11">
+              <FinanceTable
+                table_header={tableBody.table_head}
+                table_body={tableBody.table_body}
+                table__footer={tableBody.table_footer}
+              />
+            </div>
+          </div>
+          <div className="item18 grid__item">
+            <CardTitle title="GROWTH" />
+            <div className="mt-11">
+              <FinanceTable
+                table_header={tableBody.table_head}
+                table_body={tableBody.table_body}
+                table__footer={tableBody.table_footer}
+              />
+            </div>
+          </div>
+          <div className="item19 grid__item">
+            <CardTitle title="Growth rate vs. Industry" />
+          </div>
+          <div className="item20 grid__item">
+            <CardTitle title="FORECAST" />
+            <div>
+              <ColsTable />
+            </div>
+          </div>
           <div className="item21 grid__item">21</div>
           <div className="item22 grid__item">22</div>
         </div>
@@ -116,31 +266,12 @@ const Home = () => {
         options={circleChart.options}
         fill={circleChart.fill}
       />
-      <ChartWrapper>
-        <ChartComponent
-          options={info.options}
-          series={info.series}
-          type={info.type}
-          width="500"
-        />
-        <FinanceTable
-          table_header={tableBody.table_head}
-          table_body={tableBody.table_body}
-          table__footer={tableBody.table_footer}
-        />
-      </ChartWrapper>
-      <ChartWrapper>
-        <Table
-          table_header={tableData.table_header}
-          table_body={tableData.tabel_body}
-        />
-      </ChartWrapper>
+
       <ChartComponent
-        options={money.options}
-        series={money.series}
-        type="line"
-        height={600}
-        width={800}
+        options={info.options}
+        series={info.series}
+        type={info.type}
+        width="500"
       />
     </section>
   );

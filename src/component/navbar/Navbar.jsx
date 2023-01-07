@@ -1,6 +1,6 @@
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
-import BaseButton from "./BaseButton";
+import BaseButton from "../base-buttons/BaseButton";
 const Navbar = () => {
   return (
     <nav className="py-[30px]">

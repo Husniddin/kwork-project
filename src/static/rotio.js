@@ -1,22 +1,21 @@
-const money = {
+const rotioData = {
   series: [
     {
-      name: "Total Assets",
+      name: "Current assets",
       type: "column",
       data: [740, 426, 613, 415],
       color: "#3A9FF6",
-      marginLeft: "10px",
     },
     {
-      name: "Debt to Assets",
+      name: "Current lliabilities",
       type: "column",
       data: [934, 740, 421, 240],
       color: "#02EFBA",
     },
     {
-      name: "Total Debt",
+      name: "Current ratio",
       type: "line",
-      data: [0.5, 1, 1.5, 2],
+      data: [0.1, 0.4, 0.9, 0.98],
       color: "#FF7A49",
     },
   ],
@@ -135,4 +134,4 @@ const money = {
   },
 };
 
-export default money;
+export default rotioData;

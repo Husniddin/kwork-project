@@ -59,11 +59,12 @@
   left: -31px;
   display: block;
 }
-.item1__right__side .overwiew__wrapper:nth-child(3) {
-  margin-bottom: 42.46px;
-}
+
 .item2 .apexcharts-legend {
   position: absolute;
   left: 0;
   bottom: 0 !important;
+}
+.apexcharts-tooltip-title {
+  display: none;
 }
