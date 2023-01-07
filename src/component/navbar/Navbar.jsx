@@ -1,7 +1,15 @@
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import BaseButton from "../base-buttons/BaseButton";
+import { useState } from "react";
 const Navbar = () => {
+  const [num, setNum] = useState(1);
+  const handler = () => {
+    setNum(1);
+  };
+  const handlerTwo = () => {
+    setNum(2);
+  };
   return (
     <nav className="py-[30px]">
       <div className="container">
@@ -44,8 +52,8 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="flex items-center gap-[15px]">
-            <BaseButton context="Sign in" />
-            <BaseButton context="Sign up" />
+            <BaseButton context="Sign in" handlerClick={handler} />
+            <BaseButton context="Sign up" handlerClick={handlerTwo} />
           </div>
         </div>
       </div>

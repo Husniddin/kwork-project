@@ -5,10 +5,10 @@
   gap: 20px;
 }
 .grid__item {
-  border: 1px solid red;
   background: #fff;
   border-radius: 8px;
   padding: 30px 25px;
+  overflow: hidden;
 }
 .item1 {
   grid-column: 1/9;

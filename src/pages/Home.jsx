@@ -259,20 +259,14 @@ const Home = () => {
           <div className="item22 grid__item">22</div>
         </div>
       </div>
-      <ChartComponent
-        series={circleChart.series}
-        type="donut"
-        width="500"
-        options={circleChart.options}
-        fill={circleChart.fill}
-      />
 
+      {/* 
       <ChartComponent
         options={info.options}
         series={info.series}
         type={info.type}
         width="500"
-      />
+      /> */}
     </section>
   );
 };
