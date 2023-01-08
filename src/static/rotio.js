@@ -31,11 +31,28 @@ const rotioData = {
       enabled: false,
     },
     stroke: {
-      width: [0.02, 0.03, 2],
+      width: [1, 1, 2],
     },
-
+    plotOptions: {
+      bar: {
+        borderRadius: 3,
+        columnWidth: "50%",
+      },
+    },
     xaxis: {
       categories: ["9.29.2019", "9.29.2020", "9.29.2021", "9.29.2021"],
+      labels: {
+        show: true,
+        trim: false,
+        style: {
+          colors: ["#8D9092", "#8D9092", "#8D9092", "#8D9092", "#8D9092"],
+          fontSize: "10px",
+          fontFamily: "Helvetica, Arial, sans-serif",
+          fontWeight: 400,
+          lineHeight: "7.26px",
+          cssClass: "apexcharts-xaxis-label",
+        },
+      },
     },
     yaxis: [
       {
@@ -48,15 +65,10 @@ const rotioData = {
             return `${val / 100}`;
           },
           style: {
-            colors: "#02EFBA",
+            colors: "#8D9092",
           },
         },
-        title: {
-          text: "",
-          style: {
-            color: "#008FFB",
-          },
-        },
+
         tooltip: {
           enabled: false,
         },

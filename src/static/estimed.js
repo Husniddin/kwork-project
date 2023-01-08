@@ -22,14 +22,13 @@ const estimedData = {
     },
     {
       name: "Strong buy",
-      data: [0, 20, 10, 0],
+      data: [0, 30, 10, 0],
       color: "#D3212C",
     },
   ],
   options: {
     chart: {
       stacked: true,
-      // stackType: "100%",
       toolbar: {
         show: false,
       },
@@ -37,11 +36,23 @@ const estimedData = {
     plotOptions: {
       bar: {
         borderRadius: 3,
-        columnWidth: "40%",
+        columnWidth: 50,
       },
     },
     xaxis: {
       categories: ["Sep 22", "Oct 22", "Now 22", "Dec 22"],
+      labels: {
+        show: true,
+        trim: false,
+        style: {
+          colors: ["#8D9092", "#8D9092", "#8D9092", "#8D9092", "#8D9092"],
+          fontSize: "10px",
+          fontFamily: "Helvetica, Arial, sans-serif",
+          fontWeight: 400,
+          lineHeight: "7.26px",
+          cssClass: "apexcharts-xaxis-label",
+        },
+      },
     },
     yaxis: [
       {
@@ -50,7 +61,7 @@ const estimedData = {
             return `${(val * 2) / 100}`;
           },
           style: {
-            colors: "#02EFBA",
+            colors: "#8D9092",
           },
         },
       },

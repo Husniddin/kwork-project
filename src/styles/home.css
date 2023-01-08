@@ -46,6 +46,11 @@
 .item22 {
   grid-column: 9/13;
 }
+.item20,
+.item22,
+.item21 {
+  padding-bottom: 0px;
+}
 .item1__right__side {
   position: relative;
 }
@@ -58,13 +63,4 @@
   top: 0;
   left: -31px;
   display: block;
-}
-
-.item2 .apexcharts-legend {
-  position: absolute;
-  left: 0;
-  bottom: 0 !important;
-}
-.apexcharts-tooltip-title {
-  display: none;
 }

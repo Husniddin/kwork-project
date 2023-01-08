@@ -22,6 +22,9 @@ import chartImg from "../assets/chart-img.png";
 import rotioData from "../static/rotio";
 import marginRatio from "../static/margin-ratio";
 import estimedData from "../static/estimed";
+import industryData from "../static/industry";
+import marginData from "../static/netmargin";
+import netIcom from "../static/net-income";
 const Home = () => {
   return (
     <section className="pt-2">
@@ -229,8 +232,18 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item16 grid__item px-[25px]">
-            <CardTitle title="NET MARGIN" />
+          <div className="item16 grid__item">
+            <div className="px-[25px]">
+              <CardTitle title="NET MARGIN" />
+            </div>
+            <div className="mt-11">
+              <ChartComponent
+                options={marginData.options}
+                series={marginData.series}
+                width={420}
+                height={800}
+              />
+            </div>
           </div>
           <div className="item17 grid__item px-[25px]">
             <CardTitle title="EFFECTIVENESS" />
@@ -252,8 +265,18 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item19 grid__item px-[25px]">
-            <CardTitle title="Growth rate vs. Industry" />
+          <div className="item19 grid__item ">
+            <div className="px-[25px]">
+              <CardTitle title="Growth rate vs. Industry" />
+            </div>
+            <div className="mt-11 pl-1">
+              <ChartComponent
+                options={industryData.options}
+                series={industryData.series}
+                width={420}
+                height={800}
+              />
+            </div>
           </div>
           <div className="item20 grid__item px-[25px]">
             <CardTitle title="FORECAST" />
@@ -261,8 +284,18 @@ const Home = () => {
               <ColsTable />
             </div>
           </div>
-          <div className="item21 grid__item px-[25px]">
-            <CardTitle title="Estimated EPS vs. Actual EPS" />
+          <div className="item21 grid__item  ">
+            <div className="px-[25px]">
+              <CardTitle title="Estimated EPS vs. Actual EPS" />
+            </div>
+            <div className="mt-11 !h-[400px]">
+              <ChartComponent
+                options={marginRatio.options}
+                series={marginRatio.series}
+                width="100%"
+                height="400px !important"
+              />
+            </div>
           </div>
           <div className="item22 grid__item">
             <div className="ml-[25px]">
@@ -281,10 +314,10 @@ const Home = () => {
       </div>
 
       {/* <ChartComponent
-        options={estimedData.options}
-        series={estimedData.series}
-        type="bar"
-        width="500"
+        options={netIcom.options}
+        series={netIcom.series}
+        width={850}
+        height={800}
       /> */}
     </section>
   );

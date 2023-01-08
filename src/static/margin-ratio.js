@@ -5,38 +5,55 @@ const marginRatio = {
   },
   series: [
     {
-      name: "Series 1",
-      data: [45, 52, 38, 415, 222, 33],
-      type: "line",
+      name: "Estimate",
+      data: [150, 130, 110, 170, 152, 133, 130, 190],
+      type: "bar",
+      color: "#3A9FF6",
     },
+
     {
-      name: "Series 1",
-      data: [45, 2, 38, 45, 19, 33],
-      type: "line",
-    },
-    {
-      name: "Series 1",
-      data: [45, 552, 38, 45, 19, 33],
-      type: "line",
+      name: "Actual",
+      data: [180, 150, 138, 170, 145, 140, 0, 0],
+      type: "bar",
+      color: "#02EFBA",
     },
   ],
   options: {
+    dataLabels: {
+      enabled: false,
+    },
     chart: {
-      type: "line",
-      stacked: false,
       toolbar: {
         show: false,
       },
     },
-    dataLabels: {
-      enabled: false,
-    },
     stroke: {
-      width: [0.02, 0.03, 2],
+      colors: ["transparent"],
+      width: 8,
     },
-
     xaxis: {
-      categories: ["09.29.2019", "09.29.2020", "09.29.2021", "09.29.2021"],
+      categories: [
+        "Q1 Q21",
+        "Q2 Q21",
+        "Q3 Q21",
+        "Q4 Q21",
+        "Q1 Q22",
+        "Q2 Q22",
+        "Q3 Q22",
+        "Q4 Q22",
+      ],
+      labels: {
+        show: true,
+        trim: false,
+        style: {
+          colors: [],
+          fontSize: "8px",
+          fontFamily: "Helvetica, Arial, sans-serif",
+          fontWeight: 400,
+          lineHeight: "7.26px",
+          cssClass: "apexcharts-xaxis-label",
+        },
+      },
     },
     yaxis: [
       {
@@ -46,18 +63,13 @@ const marginRatio = {
 
         labels: {
           formatter: (val) => {
-            return `${val / 1}`;
+            return `${val / 10}`;
           },
           style: {
-            colors: "#02EFBA",
+            colors: "#8D9092",
           },
         },
-        title: {
-          text: "",
-          style: {
-            color: "#008FFB",
-          },
-        },
+
         tooltip: {
           enabled: false,
         },
@@ -77,8 +89,7 @@ const marginRatio = {
       show: true,
       showForZeroSeries: false,
       position: "bottom",
-      horizontalAlign: "",
-      floating: false,
+      horizontalAlign: "center",
       fontSize: "10px",
       fontFamily: "Helvetica, Arial",
       fontWeight: 400,

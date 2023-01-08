@@ -1,51 +1,60 @@
-const info = {
+const marginData = {
   series: [
     {
-      name: "Gross margin",
-      data: [810, 940, 745, 950, 949],
+      name: "Revenue",
+      data: [320, 250, 270, 270],
+      type: "bar",
       color: "#3A9FF6",
     },
+
     {
-      name: "Operating margin",
-      data: [510, 750, 615, 660, 600],
+      name: "Net income",
+      data: [300, 290, 290, 220],
+      type: "bar",
       color: "#02EFBA",
     },
     {
       name: "Net margin",
-      data: [1300, 1250, 1090, 1000, 1201],
+      data: [160, 140, 198, 170],
+      type: "line",
       color: "#FF7A49",
     },
   ],
   options: {
+    dataLabels: {
+      enabled: false,
+    },
     chart: {
       toolbar: {
         show: false,
       },
     },
+
     stroke: {
-      width: 2.06,
+      colors: ["transparent"],
+      width: [5, 5, 3, 3],
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 3,
+        columnWidth: "40%",
+      },
     },
     xaxis: {
-      categories: [
-        "9.29.2019",
-        "9.29.2020",
-        "9.29.2021",
-        "9.29.2021",
-        "9.29.2022",
-      ],
+      categories: ["09.29.2019", "09.29.2020", "09.29.2021", "09.29.2021"],
       labels: {
         show: true,
-        trim: false,
+        trim: true,
         style: {
-          colors: ["#8D9092", "#8D9092", "#8D9092", "#8D9092", "#8D9092"],
+          colors: [],
           fontSize: "10px",
           fontFamily: "Helvetica, Arial, sans-serif",
           fontWeight: 400,
-          lineHeight: "7.26px",
           cssClass: "apexcharts-xaxis-label",
         },
       },
     },
+
     yaxis: [
       {
         axisTicks: {
@@ -54,7 +63,7 @@ const info = {
 
         labels: {
           formatter: (val) => {
-            return `${val / 100}`;
+            return `${val / 10}`;
           },
           style: {
             colors: "#8D9092",
@@ -66,12 +75,21 @@ const info = {
         },
       },
     ],
+    tooltip: {
+      x: { show: false },
+      fixed: {
+        enabled: false,
+        position: "topLeft", // topRight, topLeft, bottomRight, bottomLeft
+        offsetY: 30,
+        offsetX: 60,
+      },
+    },
+
     legend: {
       show: true,
       showForZeroSeries: false,
       position: "bottom",
-      horizontalAlign: "",
-      floating: false,
+      horizontalAlign: "center",
       fontSize: "10px",
       fontFamily: "Helvetica, Arial",
       fontWeight: 400,
@@ -95,6 +113,5 @@ const info = {
       },
     },
   },
-  type: "line",
 };
-export default info;
+export default marginData;
