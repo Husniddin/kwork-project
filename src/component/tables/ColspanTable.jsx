@@ -2,44 +2,44 @@ import "../../styles/collapse-table.css";
 const ColsTable = () => {
   return (
     <div>
-      <table className="w-[372px] collapse__table">
+      <table className="w-[350px] collapse__table">
         <thead className="bg-lightBlue  overflow-hidden ">
           <tr>
-            <th className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  ">
+            <th className="text-center py-[9px] px-[10px] text-white text-[10px] font-extrabold leading-[14px]  ">
               Name
             </th>
-            <th className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  ">
+            <th className="text-center py-[9px] px-[10px] text-white text-[10px] font-extrabold leading-[14px]  ">
               Current quarter
             </th>
-            <th className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  ">
+            <th className="text-center py-[9px] px-[10px] text-white text-[10px] font-extrabold leading-[14px]  ">
               Next quarter
             </th>
-            <th className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  ">
+            <th className="text-center py-[9px] px-[10px] text-white text-[10px] font-extrabold leading-[14px]  ">
               Current year
             </th>
-            <th className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  ">
+            <th className="text-center py-[9px] px-[10px] text-white text-[10px] font-extrabold leading-[14px]  ">
               Next year
             </th>
-            <th className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  ">
+            <th className="text-center py-[9px] px-[6px] text-white text-[10px] font-extrabold leading-[14px]  ">
               Score
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px]">
+            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] ">
               Revenue (million)
             </td>
-            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px]">
+            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] ">
               $9,620
             </td>
-            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px]">
+            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] ">
               $9,570
             </td>
-            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px]">
+            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] ">
               $40,340
             </td>
-            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px]">
+            <td className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] ">
               $45,230
             </td>
             <td

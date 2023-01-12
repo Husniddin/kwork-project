@@ -2,7 +2,11 @@
   border: solid 0.2px rgba(0, 0, 0, 0.5);
 }
 .collapse__table th {
-  border: 0.2px solid #746ff2;
+  border: 0.2px solid #ffffff;
+}
+.collapse__table th {
+  border-top-color: #746ff2;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
 }
 .collapse__table th:first-child {
   border-top-left-radius: 4px;
@@ -18,6 +22,7 @@
   top: -0.2px;
   border: 0.2px solid #746ff2;
   border-top-left-radius: 6px;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
 }
 .collapse__table tr:first-child td {
   border-top: none;
@@ -37,6 +42,7 @@
   top: -0.2px;
   border: 0.2px solid #746ff2;
   border-top-right-radius: 6px;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
 }
 
 .table__footer {

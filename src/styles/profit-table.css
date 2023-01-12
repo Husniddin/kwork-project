@@ -2,8 +2,10 @@
   border: 0.2px solid rgba(0, 0, 0, 0.5);
 }
 .profit__table th {
-  border: 0.2px solid #746ff2;
+  border: 0.2px solid #fff;
   position: relative;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  border-top-color: #746ff2;
 }
 .profit__table th:nth-child(1) {
   border-top-left-radius: 4px !important;
@@ -16,8 +18,9 @@
   left: -0.2px;
   border: 0.2px solid #746ff2;
   width: 100%;
-  height: 100%;
+  height: 102%;
   border-top-left-radius: 6px;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
 }
 .profit__table th:last-child {
   border-top-right-radius: 4px !important;
@@ -32,7 +35,8 @@
   right: -0.5px;
   top: -0.2px;
   width: 100%;
-  height: 100%;
+  height: 102%;
   border-top-right-radius: 6px;
   border: 0.2px solid #746ff2;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
 }
