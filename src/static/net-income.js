@@ -1,31 +1,65 @@
+const data = {
+  datasets: [
+    {
+      label: "React",
+      data: [23, 45, 67, 65, 90],
+      backgroundColor: "#2196f3",
+      borderColor: "#2196f3",
+    },
+    {
+      label: "Js",
+      data: [323, 345, 267, 365, 190],
+      backgroundColor: "#2196f3",
+      borderColor: "#2196f3",
+    },
+    {
+      label: "TypeScript",
+      data: [63, 75, 167, 265, 90],
+      backgroundColor: "#2196f3",
+      borderColor: "#2196f3",
+    },
+  ],
+};
+
 const netIcom = {
-  series: [
+  labels: [
+    "01/01/2003",
+    "02/01/2003",
+    "03/01/2003",
+    "04/01/2003",
+    "04/01/2003",
+    "04/01/2003",
+  ],
+  data,
+  options: {},
+};
+export default netIcom;
+/*
+ series: [
+    {
+      name: "TEAM C",
+      type: "area",
+      data: [30, 25, 36, 30, 45, 35],
+    },
     {
       name: "TEAM A",
       type: "column",
-      data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
+      data: [0, 11, 22, 27, 13, 22],
     },
     {
       name: "TEAM B",
-      type: "area",
-      data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
-      color: "blue",
-    },
-    {
-      name: "TEAM C",
-      type: "line",
-      data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
-      color: "red",
+      type: "column",
+      data: [0, 55, 41, 67, 22, 43],
     },
   ],
   options: {
-    chart: {
-      height: 350,
-      type: "line",
-      stacked: false,
-    },
+    // chart: {
+    //   height: 350,
+    //   type: "line",
+    //   stacked: false,
+    // },
     stroke: {
-      width: [0, 2, 5],
+      width: [3, 2, 5],
       curve: "smooth",
     },
     plotOptions: {
@@ -35,14 +69,14 @@ const netIcom = {
     },
 
     fill: {
-      opacity: [1, , 1],
+      opacity: [0.25, 1, 1],
       gradient: {
         inverseColors: false,
         shade: "light",
         type: "vertical",
-        opacityFrom: 0.85,
+        opacityFrom: 0.25,
         opacityTo: 0.55,
-        stops: [0, 100, 100, 100],
+        stops: [0, 10, 100, 100],
       },
     },
     labels: [
@@ -50,13 +84,8 @@ const netIcom = {
       "02/01/2003",
       "03/01/2003",
       "04/01/2003",
-      "05/01/2003",
-      "06/01/2003",
-      "07/01/2003",
-      "08/01/2003",
-      "09/01/2003",
-      "10/01/2003",
-      "11/01/2003",
+      "04/01/2003",
+      "04/01/2003",
     ],
     markers: {
       size: 0,
@@ -64,7 +93,12 @@ const netIcom = {
     xaxis: {
       type: "datetime",
     },
-
+    yaxis: {
+      title: {
+        text: "Points",
+      },
+      min: 0,
+    },
     tooltip: {
       shared: true,
       intersect: false,
@@ -78,5 +112,5 @@ const netIcom = {
       },
     },
   },
-};
-export default netIcom;
+
+*/

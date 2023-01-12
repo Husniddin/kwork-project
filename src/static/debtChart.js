@@ -31,7 +31,8 @@ const money = {
     },
 
     stroke: {
-      width: [1, 1, 2.15],
+      colors: "transparent",
+      width: [5, 5, 2.15],
     },
     plotOptions: {
       bar: {
@@ -128,8 +129,8 @@ const money = {
         colors: "#000",
       },
       markers: {
-        width: 9,
-        height: 20,
+        width: 8,
+        height: 18,
         radius: 5,
       },
       itemMargin: {
@@ -137,10 +138,10 @@ const money = {
         vertical: 10,
       },
       onItemClick: {
-        toggleDataSeries: true,
+        toggleDataSeries: false,
       },
       onItemHover: {
-        highlightDataSeries: false,
+        highlightDataSeries: true,
       },
     },
   },

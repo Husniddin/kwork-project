@@ -2,14 +2,14 @@ const marginData = {
   series: [
     {
       name: "Revenue",
-      data: [320, 250, 270, 270],
+      data: [520, 750, 670, 770],
       type: "bar",
       color: "#3A9FF6",
     },
 
     {
       name: "Net income",
-      data: [300, 290, 290, 220],
+      data: [900, 600, 800, 520],
       type: "bar",
       color: "#02EFBA",
     },
@@ -41,13 +41,14 @@ const marginData = {
       },
     },
     xaxis: {
-      categories: ["09.29.2019", "09.29.2020", "09.29.2021", "09.29.2021"],
+      categories: ["9.29.2019", "9.29.2020", "9.29.2021", "9.29.2021"],
       labels: {
         show: true,
         trim: true,
         style: {
-          colors: [],
+          colors: ["#8D9092", "#8D9092", "#8D9092", "#8D9092"],
           fontSize: "10px",
+          horizontalAlign: "center",
           fontFamily: "Helvetica, Arial, sans-serif",
           fontWeight: 400,
           cssClass: "apexcharts-xaxis-label",
@@ -97,13 +98,13 @@ const marginData = {
         colors: "#000",
       },
       markers: {
-        width: 9,
-        height: 20,
+        width: 8,
+        height: 18,
         radius: 5,
       },
       itemMargin: {
         horizontal: 20,
-        vertical: 10,
+        vertical: 8,
       },
       onItemClick: {
         toggleDataSeries: true,

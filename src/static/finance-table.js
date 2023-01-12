@@ -1,7 +1,7 @@
 import trend from "../assets/trend.svg";
 
 const tableBody = {
-  table_head: ["NAME", "RATIO", "INDUSTRY", "5Y TREND", "SCORE"],
+  table_head: ["Name", "Ratio", "Industry", "5y trend", "Score"],
   table_body: [
     {
       name: "Current ratio",

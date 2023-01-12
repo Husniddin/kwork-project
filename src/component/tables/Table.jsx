@@ -1,8 +1,8 @@
 import "../../styles/profit-table.css";
 const Table = (props) => {
   return (
-    <table>
-      <thead className="bg-lightBlue profit__table">
+    <table className="!w-[372px] profit__table">
+      <thead className="bg-lightBlue ">
         <tr>
           {props.table_header.map((item, i) => (
             <th

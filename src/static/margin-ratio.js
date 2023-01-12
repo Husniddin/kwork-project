@@ -6,7 +6,7 @@ const marginRatio = {
   series: [
     {
       name: "Estimate",
-      data: [150, 130, 110, 170, 152, 133, 130, 190],
+      data: [50, 130, 110, 170, 152, 133, 130, 190],
       type: "bar",
       color: "#3A9FF6",
     },
@@ -29,7 +29,13 @@ const marginRatio = {
     },
     stroke: {
       colors: ["transparent"],
-      width: 8,
+      width: 5,
+    },
+    plotOptions: {
+      bar: {
+        borderRadius: 3,
+        columnWidth: "60%",
+      },
     },
     xaxis: {
       categories: [
@@ -51,6 +57,7 @@ const marginRatio = {
           fontFamily: "Helvetica, Arial, sans-serif",
           fontWeight: 400,
           lineHeight: "7.26px",
+          horizontalAlign: "center",
           cssClass: "apexcharts-xaxis-label",
         },
       },
@@ -97,19 +104,19 @@ const marginRatio = {
         colors: "#000",
       },
       markers: {
-        width: 9,
-        height: 20,
+        width: 8,
+        height: 18,
         radius: 5,
       },
       itemMargin: {
         horizontal: 20,
-        vertical: 10,
+        vertical: 8,
       },
       onItemClick: {
-        toggleDataSeries: true,
+        toggleDataSeries: false,
       },
       onItemHover: {
-        highlightDataSeries: false,
+        highlightDataSeries: true,
       },
     },
   },

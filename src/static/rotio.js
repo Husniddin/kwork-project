@@ -15,7 +15,7 @@ const rotioData = {
     {
       name: "Current ratio",
       type: "line",
-      data: [0.1, 0.4, 0.9, 0.98],
+      data: [0.1, 0.4, 0.9, 0.7],
       color: "#FF7A49",
     },
   ],
@@ -31,7 +31,8 @@ const rotioData = {
       enabled: false,
     },
     stroke: {
-      width: [1, 1, 2],
+      width: [5, 5, 2],
+      colors: "transparent",
     },
     plotOptions: {
       bar: {
@@ -128,19 +129,19 @@ const rotioData = {
         colors: "#000",
       },
       markers: {
-        width: 9,
-        height: 20,
+        width: 8,
+        height: 18,
         radius: 5,
       },
       itemMargin: {
         horizontal: 20,
-        vertical: 10,
+        vertical: 8,
       },
       onItemClick: {
-        toggleDataSeries: true,
+        toggleDataSeries: false,
       },
       onItemHover: {
-        highlightDataSeries: false,
+        highlightDataSeries: true,
       },
     },
   },

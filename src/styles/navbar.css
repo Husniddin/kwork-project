@@ -1,0 +1,19 @@
+.registration__btn {
+  border: 1px solid #746ff2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  border-radius: 18.5px;
+  color: #746ff2;
+  transition: all linear 0.4s;
+}
+.registration__btn:hover {
+  background: #746ff2;
+  color: #fff;
+  border-color: transparent;
+}
+.registration__btn__active {
+  background: #746ff2;
+  color: #fff;
+  border-color: transparent;
+}

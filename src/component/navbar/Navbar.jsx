@@ -2,13 +2,12 @@ import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
 import BaseButton from "../base-buttons/BaseButton";
 import { useState } from "react";
+import "../../styles/navbar.css";
 const Navbar = () => {
-  const [num, setNum] = useState(1);
-  const handler = () => {
-    setNum(1);
-  };
-  const handlerTwo = () => {
-    setNum(2);
+  const [check, setCheck] = useState(2);
+  const handleClick = (e) => {
+    let id = e.target.dataset.num;
+    setCheck(id);
   };
   return (
     <nav className="py-[30px]">
@@ -52,8 +51,28 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="flex items-center gap-[15px]">
-            <BaseButton context="Sign in" handlerClick={handler} />
-            <BaseButton context="Sign up" handlerClick={handlerTwo} />
+            <button
+              className={
+                check == "1"
+                  ? "registration__btn py-[9px] px-[18px] registration__btn__active"
+                  : "registration__btn py-[9px] px-[18px]"
+              }
+              data-num="1"
+              onClick={(e) => handleClick(e)}
+            >
+              Sign in
+            </button>
+            <button
+              className={
+                check == "2"
+                  ? "registration__btn py-[9px] px-[26px] registration__btn__active"
+                  : "registration__btn py-[9px] px-[26px]"
+              }
+              data-num="2"
+              onClick={(e) => handleClick(e)}
+            >
+              Sign up
+            </button>
           </div>
         </div>
       </div>

@@ -2,27 +2,27 @@ const estimedData = {
   series: [
     {
       name: "Strong sell",
-      data: [100, 90, 90, 30],
+      data: [400, 390, 290, 430],
       color: "#006B3D",
     },
     {
       name: "Sell",
-      data: [140, 120, 150, 70],
+      data: [440, 320, 250, 270],
       color: "#3CDA73",
     },
     {
       name: "Hold",
-      data: [80, 120, 130, 130],
+      data: [180, 220, 230, 330],
       color: "#FFCA2D",
     },
     {
       name: "Buy",
-      data: [0, 50, 30, 20],
+      data: [100, 150, 90, 120],
       color: "#FF7A49",
     },
     {
       name: "Strong buy",
-      data: [0, 30, 10, 0],
+      data: [100, 130, 200, 60],
       color: "#D3212C",
     },
   ],
@@ -35,8 +35,9 @@ const estimedData = {
     },
     plotOptions: {
       bar: {
-        borderRadius: 3,
-        columnWidth: 50,
+        // borderRadius: 10,
+        columnWidth: 45,
+        clipPath: "inset(0% 0% -2px 0% round 2px)",
       },
     },
     xaxis: {
@@ -70,7 +71,7 @@ const estimedData = {
       show: true,
       showForZeroSeries: false,
       position: "bottom",
-      horizontalAlign: "",
+      horizontalAlign: "center",
       floating: false,
       fontSize: "10px",
       fontFamily: "Helvetica, Arial",
@@ -79,19 +80,19 @@ const estimedData = {
         colors: "#000",
       },
       markers: {
-        width: 9,
-        height: 20,
+        width: 8,
+        height: 18,
         radius: 5,
       },
       itemMargin: {
-        horizontal: 18,
-        vertical: 10,
+        horizontal: 16,
+        vertical: 8,
       },
       onItemClick: {
-        toggleDataSeries: true,
+        toggleDataSeries: false,
       },
       onItemHover: {
-        highlightDataSeries: false,
+        highlightDataSeries: true,
       },
     },
   },

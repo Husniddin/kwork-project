@@ -2,13 +2,13 @@ import "../../styles/finance-table.css";
 
 const FinanceTable = (props) => {
   return (
-    <table className="w-full finance__table">
+    <table className="w-[372px] finance__table">
       <thead className="bg-lightBlue  overflow-hidden ">
         <tr>
           {props.table_header.map((item, i) => (
             <th
               key={i}
-              className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  "
+              className="text-center py-4 px-[10px]  text-white text-[10px] font-extrabold leading-[14px]  "
             >
               {item}
             </th>
@@ -40,11 +40,11 @@ const FinanceTable = (props) => {
         <tr>
           <td
             colSpan="4"
-            className="table__footer text-textDarkBlack font-normal text-xs leading-[14px] py-4 text-center"
+            className="table__footer text-textDarkBlack font-normal text-xs leading-[14px] !border-none py-4 text-center relative overflow-hidden rounded-bl"
           >
             {props.table__footer.title}
           </td>
-          <td className="py-4 text-white font-semibold text-xs leading-[14px]  text-center bg-[#3CDA73]">
+          <td className=" text-white font-semibold text-xs leading-[14px] relative text-center !border-none bg-[#3CDA73] !rounded-br py-4 ">
             {props.table__footer.allScore}
           </td>
         </tr>

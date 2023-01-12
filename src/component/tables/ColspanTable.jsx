@@ -1,8 +1,8 @@
-import "../../styles/finance-table.css";
+import "../../styles/collapse-table.css";
 const ColsTable = () => {
   return (
     <div>
-      <table className="w-full finance__table">
+      <table className="w-[372px] collapse__table">
         <thead className="bg-lightBlue  overflow-hidden ">
           <tr>
             <th className="text-center py-4 px-[14px] text-white text-[10px] font-extrabold leading-[14px]  ">
@@ -128,12 +128,12 @@ const ColsTable = () => {
         <tfoot>
           <tr>
             <td
-              className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px]"
+              className="text-center text-textDarkBlack font-normal text-xs leading-[14px] py-[10px] px-[10px] relative overflow-hidden rounded-bl !border-none"
               colSpan={5}
             >
               Weighted average score
             </td>
-            <td className="text-center text-white font-bold text-xs leading-[14px] py-4 px-[10px] bg-[#FF7A49]">
+            <td className="text-center text-white font-bold text-xs leading-[14px] py-4 px-[10px] bg-[#FF7A49] relative  rounded-br !border-none">
               8.3
             </td>
           </tr>

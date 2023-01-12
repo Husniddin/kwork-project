@@ -1,29 +1,86 @@
-const industryData = {
+const cashFlow = {
   series: [
     {
-      name: "Revenue growth",
-      data: [320, 250, 160, 270],
-      type: "bar",
+      data: [34, 35, 41, 64],
+      color: "#3A9FF6",
+      type: "column",
+    },
+    {
+      data: [53, 52, 33, 52],
+      color: "#02EFBA",
+      type: "column",
+    },
+    {
+      data: [53, 32, 33, 52],
+      color: "#FFCA2D",
+      type: "column",
+    },
+    {
+      data: [33, 32, 53, 82],
+      color: "#FF7A49",
+      type: "column",
+    },
+    {
+      data: [33, 32, 53, 82],
+      color: "red",
+      type: "column",
+    },
+  ],
+  options: {
+    chart: {
+      height: 830,
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: "40%",
+      },
+    },
+    dataLabels: {
+      enabled: false,
+      offsetX: 10,
+    },
+    stroke: {
+      show: true,
+      width: 1,
+      colors: "transparent",
+      offsetX: 100,
+    },
+    tooltip: {
+      shared: true,
+      intersect: false,
+    },
+    xaxis: {
+      categories: ["09.29.2019", "09.29.2020", "09.29.2021", "09.29.2021"],
+    },
+  },
+};
+export default cashFlow;
+/** 
+ series: [
+    {
+      name: "Operating Cash Flow",
+      type: "column",
+      data: [-740, 426, 613, 415],
       color: "#3A9FF6",
     },
-
     {
-      name: "EPS growth",
-      data: [300, 150, 290, 170],
-      type: "bar",
+      name: "Free Cash Flow",
+      type: "column",
+      data: [634, 740, 421, 240],
       color: "#02EFBA",
     },
     {
-      name: "Industry (R)",
-      data: [60, 100, 198, 170],
-      type: "line",
-      color: "#FF7A49",
+      name: "Financing Cash Flow",
+      type: "column",
+      data: [-232, -649, -410, -902],
+      color: "#FFCA2D",
     },
     {
-      name: "Industry (E)",
-      data: [100, 220, 158, 130],
-      type: "line",
-      color: "#FFCA2D",
+      name: "Investing Cash Flow",
+      type: "column",
+      data: [253, 549, 190, 112],
+      color: "#FF7A49",
     },
   ],
   options: {
@@ -38,12 +95,12 @@ const industryData = {
 
     stroke: {
       colors: ["transparent"],
-      width: [5, 5, 3, 3],
+      width: [3, 5, 5, 5],
     },
     plotOptions: {
       bar: {
         borderRadius: 3,
-        columnWidth: "40%",
+        columnWidth: "60%",
       },
     },
     xaxis: {
@@ -69,7 +126,7 @@ const industryData = {
 
         labels: {
           formatter: (val) => {
-            return `${val / 70}`;
+            return `${val / 100}`;
           },
           style: {
             colors: "#8D9092",
@@ -112,12 +169,12 @@ const industryData = {
         vertical: 10,
       },
       onItemClick: {
-        toggleDataSeries: false,
+        toggleDataSeries: true,
       },
       onItemHover: {
         highlightDataSeries: true,
       },
     },
   },
-};
-export default industryData;
+
+**/

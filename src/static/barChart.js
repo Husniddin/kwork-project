@@ -23,7 +23,7 @@ const info = {
       },
     },
     stroke: {
-      width: 2.06,
+      width: 2,
     },
     xaxis: {
       categories: [
@@ -41,7 +41,7 @@ const info = {
           fontSize: "10px",
           fontFamily: "Helvetica, Arial, sans-serif",
           fontWeight: 400,
-          lineHeight: "7.26px",
+          lineHeight: "",
           cssClass: "apexcharts-xaxis-label",
         },
       },
@@ -79,19 +79,19 @@ const info = {
         colors: "#000",
       },
       markers: {
-        width: 9,
-        height: 20,
+        width: 8,
+        height: 18,
         radius: 5,
       },
       itemMargin: {
         horizontal: 20,
-        vertical: 10,
+        vertical: 8,
       },
       onItemClick: {
-        toggleDataSeries: true,
+        toggleDataSeries: false,
       },
       onItemHover: {
-        highlightDataSeries: false,
+        highlightDataSeries: true,
       },
     },
   },
