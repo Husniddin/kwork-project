@@ -1,4 +1,11 @@
 import "../styles/home.css";
+import "react-best-tabs/dist/index.css";
+//plugins
+import { FiPlusCircle } from "react-icons/fi";
+import { IconContext } from "react-icons";
+import React from "react";
+import Tabs, { Tab } from "react-best-tabs";
+import { Link } from "react-router-dom";
 // components
 import CardTitle from "../component/cart-title/CardTitle";
 import FinanceTable from "../component/tables/FinanceTable";
@@ -6,17 +13,15 @@ import HeaderNav from "../component/navbar/HeaderNav";
 import OverView from "../component/view-list/OverView";
 import ChartComponent from "../charts/ChartComponent";
 import Table from "../component/tables/Table";
-import { FiPlusCircle } from "react-icons/fi";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { IconContext } from "react-icons";
 import ColsTable from "../component/tables/ColspanTable";
-import React, { Component } from "react";
-import Tabs, { Tab } from "react-best-tabs";
-import "react-best-tabs/dist/index.css";
+import BaseBarChart from "../charts/ReBarChart";
+import MixenChart from "../charts/MixenChart";
+import DebtAssets from "../charts/DebtAssets";
+
 // static data
 import tableBody from "../static/finance-table";
 import tableData from "../static/table-data";
-import money from "../static/debtChart";
+import debt from "../static/debtChart";
 import info from "../static/barChart";
 import companyData from "../static/companyData";
 import circleChart from "../static/donutChart";
@@ -27,29 +32,11 @@ import marginRatio from "../static/margin-ratio";
 import estimedData from "../static/estimed";
 import industryData from "../static/industry";
 import marginData from "../static/netmargin";
-import netIcom from "../static/net-income";
 import strengsData from "../static/strengs-data";
-import cashFlow from "../static/cash-flow";
-import { Line } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Legend,
-  Tooltip,
-} from "chart.js";
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Legend,
-  Tooltip
-);
+import data from "../static/cash-flow";
+import Example from "../charts/DonougthChart";
+import BaseLineChart from "../charts/LineChart";
+import NetMargin from "../charts/NetMargin";
 
 const Home = () => {
   return (
@@ -100,7 +87,7 @@ const Home = () => {
                 portions of its intellectual property portfolio, which include
                 various patent rights useful in the manufac
               </p>
-              <div className="item1__right__side w-[50%] pt-7">
+              <div className="item1__right__side w-[50%] ">
                 {companyData.map((item) => (
                   <div key={item.id}>
                     <OverView
@@ -112,23 +99,19 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            <p className="mt-1 text-black leading-[22px] text-[12px]">
+            <Link
+              to="/"
+              className="mt-1 text-blueColor leading-[22px] text-[12px]"
+            >
               See more
-            </p>
+            </Link>
           </div>
           {/* end of item1 */}
           <div className="item2 grid__item px-[25px]">
             <div className="px-[25px]">
               <CardTitle title="REVENUE BREAKDOWN" />
             </div>
-            <div className="mt-[25px] pl-1">
-              <ChartComponent
-                series={circleChart.series}
-                type="donut"
-                width="400"
-                options={circleChart.options}
-              />
-            </div>
+            <Example />
           </div>
           {/* end of item2 */}
           <div className="item3 grid__item pl-[25px] pr-[38px]">
@@ -196,31 +179,103 @@ const Home = () => {
                   title="Profitability"
                   className="text-[10px]  leading-[15px] text-lightBlue"
                 >
-                  <div className="mt-[35px]">Tab 2 content</div>
+                  <div className="mt-[35px]">
+                    {" "}
+                    <div>
+                      {strengsData.map((item) => (
+                        <div
+                          className="flex items-center gap-[17px] mt-[30px]"
+                          key={item.id}
+                        >
+                          <span
+                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
+                            style={{ background: `${item.bg_color}` }}
+                          ></span>
+                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
+                            {item.title}
+                          </h4>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </Tab>
                 <Tab
                   title="Effectiveness"
                   className="text-[10px]  leading-[15px] text-lightBlue"
                 >
-                  <div className="mt-[35px]">Tab 3 content</div>
+                  <div className="mt-[35px]">
+                    {" "}
+                    <div>
+                      {strengsData.map((item) => (
+                        <div
+                          className="flex items-center gap-[17px] mt-[30px]"
+                          key={item.id}
+                        >
+                          <span
+                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
+                            style={{ background: `${item.bg_color}` }}
+                          ></span>
+                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
+                            {item.title}
+                          </h4>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </Tab>
                 <Tab
                   title="Growth"
                   className="text-[10px]  leading-[15px] text-lightBlue"
                 >
-                  <div className="mt-[35px]">Tab 4 content</div>
+                  <div className="mt-[35px]">
+                    {" "}
+                    <div>
+                      {strengsData.map((item) => (
+                        <div
+                          className="flex items-center gap-[17px] mt-[30px]"
+                          key={item.id}
+                        >
+                          <span
+                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
+                            style={{ background: `${item.bg_color}` }}
+                          ></span>
+                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
+                            {item.title}
+                          </h4>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </Tab>
                 <Tab
                   title="Forecast"
                   className="text-[10px]  leading-[15px] text-lightBlue"
                 >
-                  <div className="mt-[35px]">Tab 5 content</div>
+                  <div className="mt-[35px]">
+                    {" "}
+                    <div>
+                      {strengsData.map((item) => (
+                        <div
+                          className="flex items-center gap-[17px] mt-[30px]"
+                          key={item.id}
+                        >
+                          <span
+                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
+                            style={{ background: `${item.bg_color}` }}
+                          ></span>
+                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
+                            {item.title}
+                          </h4>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </Tab>
                 <Tab
                   title=" "
                   className=" font-semibold leading-[25px] -ml-2 text-[#3A9FF6]"
                 >
-                  <div className="mt-[35px]">Tab 6 content</div>
+                  <div className="mt-[35px]"></div>
                 </Tab>
               </Tabs>
             </div>
@@ -243,12 +298,7 @@ const Home = () => {
               <CardTitle title="Debt to Assets" />
             </div>
             <div className=" mt-10 pl-1">
-              <ChartComponent
-                options={money.options}
-                series={money.series}
-                height={800}
-                width={495}
-              />
+              <DebtAssets data={debt} height={400} width={405} />
             </div>
           </div>
           <div className="item10 grid__item">
@@ -256,12 +306,7 @@ const Home = () => {
               <CardTitle title="Current ratio" />
             </div>
             <div className=" mt-10 pl-1">
-              <ChartComponent
-                options={rotioData.options}
-                series={rotioData.series}
-                height={800}
-                width={495}
-              />
+              <DebtAssets data={debt} height={400} width={405} />
             </div>
           </div>
           <div className="item11 grid__item px-[25px]">
@@ -305,22 +350,27 @@ const Home = () => {
                 >
                   <div className="mt-[35px]">Tab 3 content</div>
                 </Tab>
-                <Tab title=" " className=" text-[#3A9FF6]">
-                  <div className=" font-semibold leading-[25px] -ml-2 mt-[35px]">
-                    Tab 4 content
-                  </div>
-                </Tab>
               </Tabs>
             </div>
             {/* end of tab header*/}
           </div>
           {/* end of item11 */}
-          <div className="item12 grid__item px-[25px]">
-            <CardTitle title="Revenue & Net income" />
+          <div className="item12 grid__item ">
+            <div className="px-[25px] ">
+              <CardTitle title="Revenue & Net income" />
+            </div>
+            <div className="pl-[18px] mt-10">
+              <MixenChart width={450} height={400} />
+            </div>
           </div>
           {/* end of item12 */}
-          <div className="item13 grid__item">
-            <CardTitle title="Cash flow" />
+          <div className="item13 grid__item ">
+            <div className="px-[25px]">
+              <CardTitle title="Cash flow" />
+            </div>
+            <div className="pl-[10px] mt-11">
+              <BaseBarChart width={390} height={400} data={data} />
+            </div>
           </div>
           <div className="item14 grid__item px-[25px]">
             <CardTitle title="PROFITABILITY" />
@@ -337,12 +387,7 @@ const Home = () => {
               <CardTitle title="MARGIN RATIOS" />
             </div>
             <div className=" mt-10 pl-1 pr-1">
-              <ChartComponent
-                options={info.options}
-                series={info.series}
-                height={800}
-                width={430}
-              />
+              <BaseLineChart data={marginRatio} width={420} height={430} />
             </div>
           </div>
           <div className="item16 grid__item">
@@ -350,12 +395,14 @@ const Home = () => {
               <CardTitle title="NET MARGIN" />
             </div>
             <div className="mt-11">
-              <ChartComponent
+              {/* <ChartComponent
                 options={marginData.options}
                 series={marginData.series}
                 width={405}
                 height={800}
-              />
+              /> */}
+
+              <NetMargin data={marginData} width={420} height={420} />
             </div>
           </div>
           <div className="item17 grid__item px-[25px]">
@@ -402,12 +449,12 @@ const Home = () => {
               <CardTitle title="Estimated EPS vs. Actual EPS" />
             </div>
             <div className="mt-11 !h-[400px]">
-              <ChartComponent
+              {/* <ChartComponent
                 options={marginRatio.options}
                 series={marginRatio.series}
                 width="100%"
                 height={500}
-              />
+              /> */}
             </div>
           </div>
           <div className="item22 grid__item">
@@ -425,29 +472,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* <ChartComponent
-        options={netIcom.options}
-        series={netIcom.series}
-        width={850}
-        height={800}
-      /> */}
-
-      <div style={{ width: "600px", height: "400px" }}>
-        <Line
-          options={netIcom.options}
-          data={netIcom.data}
-          labels={netIcom.labels}
-        />
-      </div>
-      <section>
-        {/* <ChartComponent
-          options={cashFlow.options}
-          series={cashFlow.series}
-          height={800}
-          width={550}
-        /> */}
-      </section>
     </section>
   );
 };

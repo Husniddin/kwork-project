@@ -1,0 +1,100 @@
+.base__bar__chart .recharts-default-legend {
+  display: flex !important;
+  column-gap: 20px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding-left: 35px !important;
+}
+.base__bar__chart .legend-item-0::before,
+.base__bar__chart .legend-item-1::before,
+.base__bar__chart .legend-item-2::before,
+.base__bar__chart .legend-item-3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.base__bar__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.base__bar__chart .legend-item-1::before {
+  background: #ff7a49;
+}
+.base__bar__chart .legend-item-2::before {
+  background: #ffca2d;
+}
+.base__bar__chart .legend-item-3::before {
+  background: #02efba;
+  left: 1px;
+}
+/* base line chart */
+.base__line__chart .recharts-default-legend {
+  display: flex !important;
+  column-gap: 20px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding-left: 35px !important;
+}
+.base__line__chart .legend-item-0::before,
+.base__line__chart .legend-item-1::before,
+.base__line__chart .legend-item-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.base__line__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.base__line__chart .legend-item-1::before {
+  background: #02efba;
+  left: 1px;
+}
+.base__line__chart .legend-item-2::before {
+  background: #ff7a49;
+}
+
+/* net bar chart */
+.net__bar__chart .recharts-default-legend {
+  display: flex !important;
+  column-gap: 20px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding-left: 35px !important;
+}
+.net__bar__chart .legend-item-0::before,
+.net__bar__chart .legend-item-1::before,
+.net__bar__chart .legend-item-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.net__bar__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.net__bar__chart .legend-item-1::before {
+  background: #02efba;
+  left: 1px;
+}
+.net__bar__chart .legend-item-2::before {
+  background: #ff7a49;
+}

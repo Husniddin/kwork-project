@@ -116,19 +116,7 @@
   color: #746ff2;
   font-size: 10px;
 }
-.current__ratio li:last-child {
-  width: 10px;
-  height: 8px;
-  position: relative;
-}
-.current__ratio li:last-child::after {
-  content: "\203a";
-  display: block;
-  position: absolute;
-  bottom: -13px;
-  left: -5px;
-  font-size: 28px;
-}
+
 .strengs__tab .rb-tabs-header::after {
   content: "";
   display: block;
@@ -167,7 +155,7 @@
   content: "\203a";
   display: block;
   position: absolute;
-  bottom: -5px;
+  bottom: -7px;
   left: -2px;
-  font-size: 28px;
+  font-size: 23px;
 }

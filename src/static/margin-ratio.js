@@ -1,124 +1,27 @@
-const marginRatio = {
-  chart: {
-    height: 500,
-    width: "100%",
+const marginRatio = [
+  {
+    name: "09.29.2019",
+    "Gross margin": 150,
+    "Operating margin": 100,
+    "Net margin": 50,
   },
-  series: [
-    {
-      name: "Estimate",
-      data: [50, 130, 110, 170, 152, 133, 130, 190],
-      type: "bar",
-      color: "#3A9FF6",
-    },
-
-    {
-      name: "Actual",
-      data: [180, 150, 138, 170, 145, 140, 0, 0],
-      type: "bar",
-      color: "#02EFBA",
-    },
-  ],
-  options: {
-    dataLabels: {
-      enabled: false,
-    },
-    chart: {
-      toolbar: {
-        show: false,
-      },
-    },
-    stroke: {
-      colors: ["transparent"],
-      width: 5,
-    },
-    plotOptions: {
-      bar: {
-        borderRadius: 3,
-        columnWidth: "60%",
-      },
-    },
-    xaxis: {
-      categories: [
-        "Q1 Q21",
-        "Q2 Q21",
-        "Q3 Q21",
-        "Q4 Q21",
-        "Q1 Q22",
-        "Q2 Q22",
-        "Q3 Q22",
-        "Q4 Q22",
-      ],
-      labels: {
-        show: true,
-        trim: false,
-        style: {
-          colors: [],
-          fontSize: "8px",
-          fontFamily: "Helvetica, Arial, sans-serif",
-          fontWeight: 400,
-          lineHeight: "7.26px",
-          horizontalAlign: "center",
-          cssClass: "apexcharts-xaxis-label",
-        },
-      },
-    },
-    yaxis: [
-      {
-        axisTicks: {
-          show: false,
-        },
-
-        labels: {
-          formatter: (val) => {
-            return `${val / 10}`;
-          },
-          style: {
-            colors: "#8D9092",
-          },
-        },
-
-        tooltip: {
-          enabled: false,
-        },
-      },
-    ],
-    tooltip: {
-      x: { show: false },
-      fixed: {
-        enabled: false,
-        position: "topLeft", // topRight, topLeft, bottomRight, bottomLeft
-        offsetY: 30,
-        offsetX: 60,
-      },
-    },
-
-    legend: {
-      show: true,
-      showForZeroSeries: false,
-      position: "bottom",
-      horizontalAlign: "center",
-      fontSize: "10px",
-      fontFamily: "Helvetica, Arial",
-      fontWeight: 400,
-      labels: {
-        colors: "#000",
-      },
-      markers: {
-        width: 8,
-        height: 18,
-        radius: 5,
-      },
-      itemMargin: {
-        horizontal: 20,
-        vertical: 8,
-      },
-      onItemClick: {
-        toggleDataSeries: false,
-      },
-      onItemHover: {
-        highlightDataSeries: true,
-      },
-    },
+  {
+    name: "09.29.2020",
+    "Gross margin": 147,
+    "Operating margin": 134,
+    "Net margin": 80,
   },
-};
+  {
+    name: "09.29.2021",
+    "Gross margin": 178,
+    "Operating margin": 120,
+    "Net margin": 88,
+  },
+  {
+    name: "09.29.2021",
+    "Gross margin": 188,
+    "Operating margin": 100,
+    "Net margin": 130,
+  },
+];
 export default marginRatio;

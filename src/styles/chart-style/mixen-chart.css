@@ -1,0 +1,29 @@
+.mixen__chart .recharts-default-legend {
+  display: flex !important;
+  column-gap: 20px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding-left: 35px !important;
+}
+.mixen__chart .legend-item-0::before,
+.mixen__chart .legend-item-1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.mixen__chart .legend-item-2 {
+  display: none !important;
+}
+.mixen__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.mixen__chart .legend-item-1::before {
+  background: #02efba;
+}

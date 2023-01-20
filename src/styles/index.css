@@ -9,7 +9,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth !important;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
 }
 body {
   background: #f7f8fa;
@@ -20,6 +20,27 @@ body {
   margin: 0 auto;
 }
 
+.recharts-default-legend {
+  display: flex !important;
+  column-gap: 20px;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center;
+}
+.recharts-legend-item {
+  position: relative !important;
+  margin-left: 10px !important;
+}
+
+.recharts-legend-item-text {
+  font-size: 10px !important;
+  color: #000000 !important;
+  font-family: "Inter", sans-serif;
+  width: max-content !important;
+}
+.recharts-legend-item svg {
+  opacity: 0 !important;
+}
 @media screen and (min-width: 300px) and (max-width: 576px) {
   .container {
     width: 100%;

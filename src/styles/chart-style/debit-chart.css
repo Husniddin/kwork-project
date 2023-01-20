@@ -1,0 +1,30 @@
+.debit__chart .recharts-default-legend {
+  display: flex !important;
+  column-gap: 20px !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding-left: 35px !important;
+}
+.debit__chart .legend-item-0::before,
+.debit__chart .legend-item-1::before,
+.debit__chart .legend-item-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.debit__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.debit__chart .legend-item-1::before {
+  background: #02efba;
+}
+.debit__chart .legend-item-2::before {
+  background: #ff7a49;
+}

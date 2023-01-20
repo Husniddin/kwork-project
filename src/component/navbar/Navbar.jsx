@@ -1,5 +1,5 @@
 import logo from "../../assets/logo.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import BaseButton from "../base-buttons/BaseButton";
 import { useState } from "react";
 import "../../styles/navbar.css";
@@ -13,9 +13,9 @@ const Navbar = () => {
     <nav className="py-[30px]">
       <div className="container">
         <div className="flex items-center justify-between">
-          <div className="nav__logo max-w-[162px] max-h-[37.56px]">
+          <Link to="/" className="nav__logo max-w-[162px] max-h-[37.56px]">
             <img src={logo} alt="nav-logo" className="w-full h-full" />
-          </div>
+          </Link>
           <ul className="flex items-center gap-[85px]">
             <li>
               <NavLink
