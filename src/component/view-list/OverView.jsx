@@ -1,7 +1,12 @@
 //
 const OverView = (props) => {
   return (
-    <div className="flex items-center w-full border-b-[1px] border-b-[#E8EFFF] pb-[5px] justify-between mb-4 overwiew__wrapper">
+    <div
+      className="flex items-center w-full border-b-[1px] border-b-[#E8EFFF] pb-[5px] justify-between mb-4 overwiew__wrapper"
+      style={{
+        marginBottom: `${props.bottomSpace ? props.bottomSpace : "14px"}`,
+      }}
+    >
       <p className="text-sm font-medium leading-[14px] text-darkBlue ">
         {props.text}
       </p>

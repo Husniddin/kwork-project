@@ -87,7 +87,7 @@
 .rb-tabs .rb-tabs-header .rb-tabs-active-item {
   height: 1px;
   background-color: #3a9ff6 !important;
-  top: 17px;
+  top: 23px;
 }
 .rb-tabs .rb-tabs-header .rb-tabs-items .rb-tabs-item.active {
   color: #3a9ff6 !important;
@@ -116,7 +116,11 @@
   color: #746ff2;
   font-size: 10px;
 }
-
+.strengs__tab .rb-tabs-header {
+  /* border: 1px solid red; */
+  width: 100%;
+  /* overflow: hidden; */
+}
 .strengs__tab .rb-tabs-header::after {
   content: "";
   display: block;
@@ -133,29 +137,28 @@
 .strengs__tab li {
   padding: 0 !important;
   position: relative;
+  font-size: 10px;
 }
 .strengs__tab li:nth-child(1)::after,
 .strengs__tab li:nth-child(2)::after,
 .strengs__tab li:nth-child(3)::after,
-.strengs__tab li:nth-child(4)::after {
+.strengs__tab li:nth-child(4)::after,
+.strengs__tab li:nth-child(5)::after,
+.strengs__tab li:nth-child(6)::after,
+.strengs__tab li:nth-child(7)::after {
   content: "|";
   display: block;
   position: absolute;
   right: -8px;
   top: 0;
   color: #746ff2;
-  font-size: 10px;
 }
-.strengs__tab li:last-child {
-  width: 10px;
-  height: 8px;
-  position: relative;
-}
-.strengs__tab li:last-child::after {
+
+/* .strengs__tab li:last-child::after {
   content: "\203a";
   display: block;
   position: absolute;
   bottom: -7px;
   left: -2px;
   font-size: 23px;
-}
+} */

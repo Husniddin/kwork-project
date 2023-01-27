@@ -17,26 +17,27 @@ import ColsTable from "../component/tables/ColspanTable";
 import BaseBarChart from "../charts/ReBarChart";
 import MixenChart from "../charts/MixenChart";
 import DebtAssets from "../charts/DebtAssets";
+import WeaknessTab from "../component/tabComponents/WeaknessTab";
+import RateIndustry from "../charts/RateIndustry";
 
 // static data
 import tableBody from "../static/finance-table";
 import tableData from "../static/table-data";
 import debt from "../static/debtChart";
-import info from "../static/barChart";
 import companyData from "../static/companyData";
 import circleChart from "../static/donutChart";
 import overView from "../static/over-view";
 import chartImg from "../assets/chart-img.png";
-import rotioData from "../static/rotio";
 import marginRatio from "../static/margin-ratio";
 import estimedData from "../static/estimed";
-import industryData from "../static/industry";
 import marginData from "../static/netmargin";
-import strengsData from "../static/strengs-data";
 import data from "../static/cash-flow";
 import Example from "../charts/DonougthChart";
 import BaseLineChart from "../charts/LineChart";
 import NetMargin from "../charts/NetMargin";
+import StackedChart from "../charts/StackedChart";
+import EstimateActual from "../charts/EstimateActual";
+import OctagonChart from "../charts/RadarChart";
 
 const Home = () => {
   return (
@@ -73,7 +74,7 @@ const Home = () => {
           <div className="item1 grid__item px-[25px] pb-[34px]">
             <CardTitle title="About the company" />
             <div className="flex gap-[50px] mt-[25px] ">
-              <p className="w-[50%] text-[12px] leading-[22px] text-black">
+              <p className="w-[52.5%] text-[12px] leading-[22px] text-black">
                 QUALCOMM Incorporated engages in the development and
                 commercialization of foundational technologies for the wireless
                 industry worldwide. It operates through three segments: Qualcomm
@@ -87,13 +88,14 @@ const Home = () => {
                 portions of its intellectual property portfolio, which include
                 various patent rights useful in the manufac
               </p>
-              <div className="item1__right__side w-[50%] ">
+              <div className="item1__right__side w-[47.5%] ">
                 {companyData.map((item) => (
                   <div key={item.id}>
                     <OverView
                       text={item.title}
                       quantity={item.name}
-                      context_width="42%"
+                      context_width="45%"
+                      bottomSpace="16px"
                     />
                   </div>
                 ))}
@@ -122,7 +124,7 @@ const Home = () => {
                   key={item.id}
                   text={item.name}
                   quantity={item.data}
-                  context_width="27%"
+                  context_width="30%"
                 />
               ))}
             </div>
@@ -141,144 +143,14 @@ const Home = () => {
           {/* end of item5 */}
           <div className="item6 grid__item px-[25px]">
             <CardTitle title="Octagon view" />
+            <div>
+              <OctagonChart />
+            </div>
           </div>
           {/* end of item6 */}
           <div className="item7 grid__item px-[25px]">
             <CardTitle title="strength & weakness" />
-            <div className="mt-2 mb-[43px]">
-              <Tabs
-                activeTab="1"
-                className="strengs__tab"
-                ulClassName=""
-                activityClassName="!h-[1px] top-[17px]"
-              >
-                <Tab
-                  title="Financial strength"
-                  className="text-[10px]  leading-[15px] text-lightBlue"
-                >
-                  <div className="mt-[35px]">
-                    <div>
-                      {strengsData.map((item) => (
-                        <div
-                          className="flex items-center gap-[17px] mt-[30px]"
-                          key={item.id}
-                        >
-                          <span
-                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
-                            style={{ background: `${item.bg_color}` }}
-                          ></span>
-                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
-                            {item.title}
-                          </h4>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </Tab>
-                <Tab
-                  title="Profitability"
-                  className="text-[10px]  leading-[15px] text-lightBlue"
-                >
-                  <div className="mt-[35px]">
-                    {" "}
-                    <div>
-                      {strengsData.map((item) => (
-                        <div
-                          className="flex items-center gap-[17px] mt-[30px]"
-                          key={item.id}
-                        >
-                          <span
-                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
-                            style={{ background: `${item.bg_color}` }}
-                          ></span>
-                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
-                            {item.title}
-                          </h4>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </Tab>
-                <Tab
-                  title="Effectiveness"
-                  className="text-[10px]  leading-[15px] text-lightBlue"
-                >
-                  <div className="mt-[35px]">
-                    {" "}
-                    <div>
-                      {strengsData.map((item) => (
-                        <div
-                          className="flex items-center gap-[17px] mt-[30px]"
-                          key={item.id}
-                        >
-                          <span
-                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
-                            style={{ background: `${item.bg_color}` }}
-                          ></span>
-                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
-                            {item.title}
-                          </h4>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </Tab>
-                <Tab
-                  title="Growth"
-                  className="text-[10px]  leading-[15px] text-lightBlue"
-                >
-                  <div className="mt-[35px]">
-                    {" "}
-                    <div>
-                      {strengsData.map((item) => (
-                        <div
-                          className="flex items-center gap-[17px] mt-[30px]"
-                          key={item.id}
-                        >
-                          <span
-                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
-                            style={{ background: `${item.bg_color}` }}
-                          ></span>
-                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
-                            {item.title}
-                          </h4>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </Tab>
-                <Tab
-                  title="Forecast"
-                  className="text-[10px]  leading-[15px] text-lightBlue"
-                >
-                  <div className="mt-[35px]">
-                    {" "}
-                    <div>
-                      {strengsData.map((item) => (
-                        <div
-                          className="flex items-center gap-[17px] mt-[30px]"
-                          key={item.id}
-                        >
-                          <span
-                            className="block h-[31px] !w-[9.08px] rounded-[8px]"
-                            style={{ background: `${item.bg_color}` }}
-                          ></span>
-                          <h4 className="text-[10px] leading-[15px] font-medium text-black flex-1">
-                            {item.title}
-                          </h4>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </Tab>
-                <Tab
-                  title=" "
-                  className=" font-semibold leading-[25px] -ml-2 text-[#3A9FF6]"
-                >
-                  <div className="mt-[35px]"></div>
-                </Tab>
-              </Tabs>
-            </div>
+            <WeaknessTab />
             {/* end of tab */}
           </div>
           {/* end of item7 */}
@@ -298,7 +170,7 @@ const Home = () => {
               <CardTitle title="Debt to Assets" />
             </div>
             <div className=" mt-10 pl-1">
-              <DebtAssets data={debt} height={400} width={405} />
+              <DebtAssets data={debt} height={390} width={405} />
             </div>
           </div>
           <div className="item10 grid__item">
@@ -306,7 +178,7 @@ const Home = () => {
               <CardTitle title="Current ratio" />
             </div>
             <div className=" mt-10 pl-1">
-              <DebtAssets data={debt} height={400} width={405} />
+              <DebtAssets data={debt} height={390} width={405} />
             </div>
           </div>
           <div className="item11 grid__item px-[25px]">
@@ -387,7 +259,7 @@ const Home = () => {
               <CardTitle title="MARGIN RATIOS" />
             </div>
             <div className=" mt-10 pl-1 pr-1">
-              <BaseLineChart data={marginRatio} width={420} height={430} />
+              <BaseLineChart data={marginRatio} width={390} height={380} />
             </div>
           </div>
           <div className="item16 grid__item">
@@ -395,14 +267,7 @@ const Home = () => {
               <CardTitle title="NET MARGIN" />
             </div>
             <div className="mt-11">
-              {/* <ChartComponent
-                options={marginData.options}
-                series={marginData.series}
-                width={405}
-                height={800}
-              /> */}
-
-              <NetMargin data={marginData} width={420} height={420} />
+              <NetMargin data={marginData} width={420} height={370} />
             </div>
           </div>
           <div className="item17 grid__item px-[25px]">
@@ -430,12 +295,7 @@ const Home = () => {
               <CardTitle title="Growth rate vs. Industry" />
             </div>
             <div className="mt-11 pl-1">
-              <ChartComponent
-                options={industryData.options}
-                series={industryData.series}
-                width={400}
-                height={800}
-              />
+              <RateIndustry width={390} height={380} />
             </div>
           </div>
           <div className="item20 grid__item px-[25px]">
@@ -449,12 +309,7 @@ const Home = () => {
               <CardTitle title="Estimated EPS vs. Actual EPS" />
             </div>
             <div className="mt-11 !h-[400px]">
-              {/* <ChartComponent
-                options={marginRatio.options}
-                series={marginRatio.series}
-                width="100%"
-                height={500}
-              /> */}
+              <EstimateActual />
             </div>
           </div>
           <div className="item22 grid__item">
@@ -462,15 +317,11 @@ const Home = () => {
               <CardTitle title="Analyst rating" />
             </div>
             <div className="mt-11 px-[3px]">
-              <ChartComponent
-                options={estimedData.options}
-                series={estimedData.series}
-                type="bar"
-                width={405}
-              />
+              <StackedChart />
             </div>
           </div>
         </div>
+        <OctagonChart />
       </div>
     </section>
   );

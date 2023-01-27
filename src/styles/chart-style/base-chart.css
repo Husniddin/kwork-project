@@ -98,3 +98,80 @@
 .net__bar__chart .legend-item-2::before {
   background: #ff7a49;
 }
+/* industry__chart */
+.industry__chart .recharts-default-legend {
+  display: flex !important;
+  column-gap: 0px !important;
+  align-items: center !important;
+  padding-left: 8px !important;
+  flex-wrap: nowrap !important;
+  width: 420px !important;
+}
+.industry__chart .legend-item {
+  margin: 0;
+}
+.industry__chart .legend-item-0::before,
+.industry__chart .legend-item-1::before,
+.industry__chart .legend-item-2::before,
+.industry__chart .legend-item-3::before {
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+  content: "";
+}
+.industry__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.industry__chart .legend-item-1::before {
+  background: #02efba;
+}
+.industry__chart .legend-item-2::before {
+  background: #ff7a49;
+}
+.industry__chart .legend-item-3::before {
+  background: #ffca2d;
+}
+
+/* stacked chart */
+.stacked__chart .recharts-default-legend {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  column-gap: 5px !important;
+  flex-direction: row-reverse;
+  padding-left: 20px !important;
+}
+.stacked__chart .legend-item-0::before,
+.stacked__chart .legend-item-1::before,
+.stacked__chart .legend-item-2::before,
+.stacked__chart .legend-item-3::before,
+.stacked__chart .legend-item-4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.stacked__chart .legend-item-0::before {
+  background: #006b3d;
+}
+.stacked__chart .legend-item-1::before {
+  background: #3cda73;
+}
+.stacked__chart .legend-item-2::before {
+  background: #ffca2d;
+}
+.stacked__chart .legend-item-3::before {
+  background: #ff7a49;
+}
+.stacked__chart .legend-item-4::before {
+  background: #d3212c;
+}

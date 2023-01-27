@@ -36,6 +36,7 @@ const DebtAssets = (props) => {
           domain={[0, 100]}
           tick={{ fontSize: 10 }}
           tickLine={false}
+          tickCount={12}
         />
         <Tooltip
           cursor={{ fill: "green" }}
@@ -48,8 +49,13 @@ const DebtAssets = (props) => {
         />
         <Legend verticalAlign="bottom" />
         <ReferenceLine y={0} stroke="#000" />
-        <Bar dataKey="Total Assets" fill="#3A9FF6" radius={5} barSize={18} />
-        <Bar dataKey="Debt to Assets" fill="#02EFBA" radius={5} barSize={18} />
+        <Bar dataKey="Total Assets" fill="#3A9FF6" radius={3.6} barSize={18} />
+        <Bar
+          dataKey="Debt to Assets"
+          fill="#02EFBA"
+          radius={3.6}
+          barSize={18}
+        />
         <Line
           type="natural"
           dataKey="Total Debt"

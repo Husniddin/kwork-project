@@ -37,7 +37,7 @@ const NetMargin = (props) => {
           domain={[0, 100]}
           tick={{ fontSize: 10 }}
           tickLine={false}
-          tickCount={8}
+          tickCount={12}
         />
         <Tooltip
           cursor={{ fill: `${props.hover ? props.hover : "transparent"}` }}
@@ -50,8 +50,8 @@ const NetMargin = (props) => {
         />
         <Legend verticalAlign="bottom" />
         <ReferenceLine y={0} stroke="#000" />
-        <Bar dataKey="Revenue" fill="#3A9FF6" radius={5} barSize={19} />
-        <Bar dataKey="Net income" fill="#02EFBA" radius={5} barSize={19} />
+        <Bar dataKey="Revenue" fill="#3A9FF6" radius={3.6} barSize={19} />
+        <Bar dataKey="Net income" fill="#02EFBA" radius={3.6} barSize={19} />
         <Line
           dataKey="Net margin"
           stroke="#FF7A49"

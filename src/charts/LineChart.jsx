@@ -16,7 +16,7 @@ const BaseLineChart = (props) => {
         width={props.width}
         height={props.height}
         data={props.data}
-        margin={{ top: 5, right: 30, left: -10, bottom: 5 }}
+        margin={{ top: 0, right: 0, left: -10, bottom: 5 }}
       >
         <CartesianGrid strokeDasharray="3 0" vertical={false} />
         <XAxis dataKey="name" tickLine={false} tick={{ fontSize: 10 }} />
@@ -26,7 +26,7 @@ const BaseLineChart = (props) => {
           tick={{ fontSize: 10 }}
           tickLine={false}
           axisLine={false}
-          tickCount={8}
+          tickCount={12}
         />
 
         <Legend />

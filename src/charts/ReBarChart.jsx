@@ -35,6 +35,7 @@ const BaseBarChart = (props) => {
           domain={[0, 100]}
           tick={{ fontSize: 10 }}
           tickLine={false}
+          tickCount={12}
         />
         <Tooltip
           cursor={{ fill: `${props.hover ? props.hover : "transparent"}` }}
@@ -47,10 +48,10 @@ const BaseBarChart = (props) => {
         />
         <Legend verticalAlign="bottom" />
         <ReferenceLine y={0} stroke="#000" />
-        <Bar dataKey="Operating Cash Flow" fill="#3A9FF6" radius={5} />
-        <Bar dataKey="Free Cash Flow" fill="#02EFBA" radius={5} />
-        <Bar dataKey="Financing Cash Flow" fill="#FFCA2D" radius={5} />
-        <Bar dataKey="Investing Cash Flow" fill="#FF7A49" radius={5} />
+        <Bar dataKey="Operating Cash Flow" fill="#3A9FF6" radius={2.6} />
+        <Bar dataKey="Free Cash Flow" fill="#02EFBA" radius={2.6} />
+        <Bar dataKey="Financing Cash Flow" fill="#FFCA2D" radius={2.6} />
+        <Bar dataKey="Investing Cash Flow" fill="#FF7A49" radius={2.6} />
       </BarChart>
     </div>
   );

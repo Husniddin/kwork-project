@@ -1,7 +1,7 @@
 const data = [
   {
     name: "09.29.2019",
-    "Total Assets": 400,
+    "Total Assets": 380,
     "Debt to Assets": 240,
     "Total Debt": 10,
   },
@@ -14,7 +14,7 @@ const data = [
   {
     name: "09.29.2021",
     "Total Assets": 200,
-    "Debt to Assets": 400,
+    "Debt to Assets": 380,
     "Total Debt": 150,
   },
   {

@@ -56,7 +56,7 @@ const MixenChart = (props) => {
           <YAxis
             type="number"
             tick={{ fontSize: 10 }}
-            tickCount={6}
+            tickCount={12}
             tickLine={false}
             axisLine={true}
             padding={{ left: -40 }}
