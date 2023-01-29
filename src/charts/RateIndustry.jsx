@@ -14,35 +14,35 @@ const RateIndustry = (props) => {
   const data = [
     {
       name: "09.29.2019",
-      "Revenue growth": 590,
-      "EPS growth": 700,
-      "Industry (R)": 130,
-      "Industry (E)": 600,
+      "Revenue growth": 220,
+      "EPS growth": 320,
+      "Industry (R)": 100,
+      "Industry (E)": 280,
     },
     {
       name: "09.29.2020",
-      "Revenue growth": 600,
-      "EPS growth": 600,
-      "Industry (R)": 403,
+      "Revenue growth": 280,
+      "EPS growth": 170,
+      "Industry (R)": 200,
+      "Industry (E)": 60,
+    },
+    {
+      name: "09.29.2021",
+      "Revenue growth": 270,
+      "EPS growth": 300,
+      "Industry (R)": 200,
       "Industry (E)": 300,
     },
     {
       name: "09.29.2021",
-      "Revenue growth": 370,
-      "EPS growth": 750,
-      "Industry (R)": 700,
-      "Industry (E)": 600,
-    },
-    {
-      name: "09.29.2021",
-      "Revenue growth": 480,
-      "EPS growth": 600,
-      "Industry (R)": 500,
-      "Industry (E)": 700,
+      "Revenue growth": 400,
+      "EPS growth": 380,
+      "Industry (R)": 230,
+      "Industry (E)": 290,
     },
   ];
   return (
-    <div className="industry__chart">
+    <div className="industry__chart ">
       <ComposedChart
         width={props.width}
         height={props.height}
@@ -59,8 +59,8 @@ const RateIndustry = (props) => {
         <YAxis
           type="number"
           tick={{ fontSize: 10 }}
-          domain={[0, 100]}
-          tickCount={10}
+          domain={[0, 500]}
+          tickCount={20}
           tickLine={false}
           axisLine={true}
         />

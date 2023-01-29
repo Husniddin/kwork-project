@@ -25,19 +25,18 @@ import tableBody from "../static/finance-table";
 import tableData from "../static/table-data";
 import debt from "../static/debtChart";
 import companyData from "../static/companyData";
-import circleChart from "../static/donutChart";
 import overView from "../static/over-view";
 import chartImg from "../assets/chart-img.png";
 import marginRatio from "../static/margin-ratio";
-import estimedData from "../static/estimed";
 import marginData from "../static/netmargin";
 import data from "../static/cash-flow";
-import Example from "../charts/DonougthChart";
 import BaseLineChart from "../charts/LineChart";
 import NetMargin from "../charts/NetMargin";
 import StackedChart from "../charts/StackedChart";
 import EstimateActual from "../charts/EstimateActual";
 import OctagonChart from "../charts/RadarChart";
+import CurrentRatio from "../charts/CurrentRatio";
+import DonougthChart from "../charts/DonougthChart";
 
 const Home = () => {
   return (
@@ -88,7 +87,7 @@ const Home = () => {
                 portions of its intellectual property portfolio, which include
                 various patent rights useful in the manufac
               </p>
-              <div className="item1__right__side w-[47.5%] ">
+              <div className="item1__right__side w-[47.5%] max-h-[457px]">
                 {companyData.map((item) => (
                   <div key={item.id}>
                     <OverView
@@ -113,7 +112,7 @@ const Home = () => {
             <div className="px-[25px]">
               <CardTitle title="REVENUE BREAKDOWN" />
             </div>
-            <Example />
+            <DonougthChart />
           </div>
           {/* end of item2 */}
           <div className="item3 grid__item pl-[25px] pr-[38px]">
@@ -170,7 +169,7 @@ const Home = () => {
               <CardTitle title="Debt to Assets" />
             </div>
             <div className=" mt-10 pl-1">
-              <DebtAssets data={debt} height={390} width={405} />
+              <DebtAssets data={debt} height={345} width={390} />
             </div>
           </div>
           <div className="item10 grid__item">
@@ -178,7 +177,7 @@ const Home = () => {
               <CardTitle title="Current ratio" />
             </div>
             <div className=" mt-10 pl-1">
-              <DebtAssets data={debt} height={390} width={405} />
+              <CurrentRatio height={345} width={390} />
             </div>
           </div>
           <div className="item11 grid__item px-[25px]">
@@ -231,8 +230,8 @@ const Home = () => {
             <div className="px-[25px] ">
               <CardTitle title="Revenue & Net income" />
             </div>
-            <div className="pl-[18px] mt-10">
-              <MixenChart width={450} height={400} />
+            <div className=" mt-11">
+              <MixenChart width={390} height={345} />
             </div>
           </div>
           {/* end of item12 */}
@@ -241,7 +240,7 @@ const Home = () => {
               <CardTitle title="Cash flow" />
             </div>
             <div className="pl-[10px] mt-11">
-              <BaseBarChart width={390} height={400} data={data} />
+              <BaseBarChart width={390} height={345} data={data} />
             </div>
           </div>
           <div className="item14 grid__item px-[25px]">
@@ -259,7 +258,7 @@ const Home = () => {
               <CardTitle title="MARGIN RATIOS" />
             </div>
             <div className=" mt-10 pl-1 pr-1">
-              <BaseLineChart data={marginRatio} width={390} height={380} />
+              <BaseLineChart data={marginRatio} width={390} height={334} />
             </div>
           </div>
           <div className="item16 grid__item">
@@ -267,7 +266,7 @@ const Home = () => {
               <CardTitle title="NET MARGIN" />
             </div>
             <div className="mt-11">
-              <NetMargin data={marginData} width={420} height={370} />
+              <NetMargin data={marginData} width={420} height={334} />
             </div>
           </div>
           <div className="item17 grid__item px-[25px]">
@@ -295,7 +294,7 @@ const Home = () => {
               <CardTitle title="Growth rate vs. Industry" />
             </div>
             <div className="mt-11 pl-1">
-              <RateIndustry width={390} height={380} />
+              <RateIndustry width={390} height={334} />
             </div>
           </div>
           <div className="item20 grid__item px-[25px]">
@@ -321,7 +320,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <OctagonChart />
       </div>
     </section>
   );

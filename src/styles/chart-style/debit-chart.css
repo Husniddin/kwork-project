@@ -28,3 +28,22 @@
 .debit__chart .legend-item-2::before {
   background: #ff7a49;
 }
+.debit__chart .recharts-cartesian-axis-ticks {
+  position: relative !important;
+}
+.debit__chart .legend-item-0::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -315px;
+  left: 40%;
+  width: 90%;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.debit__chart .legend-item-0:hover::after {
+  opacity: 1;
+}

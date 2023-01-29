@@ -11,7 +11,7 @@ import "../styles/chart-style/base-chart.css";
 
 const BaseLineChart = (props) => {
   return (
-    <div className="base__line__chart">
+    <div className="base__line__chart  ">
       <LineChart
         width={props.width}
         height={props.height}
@@ -22,11 +22,11 @@ const BaseLineChart = (props) => {
         <XAxis dataKey="name" tickLine={false} tick={{ fontSize: 10 }} />
         <YAxis
           type="number"
-          domain={[0, 100]}
+          domain={[0, 200]}
           tick={{ fontSize: 10 }}
           tickLine={false}
           axisLine={false}
-          tickCount={12}
+          tickCount={23}
         />
 
         <Legend />

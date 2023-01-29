@@ -13,7 +13,7 @@ import {
 import "../styles/chart-style/base-chart.css";
 const NetMargin = (props) => {
   return (
-    <div className="net__bar__chart">
+    <div className="net__bar__chart ">
       <ComposedChart
         width={props.width}
         height={props.height}
@@ -34,10 +34,10 @@ const NetMargin = (props) => {
         <XAxis dataKey="name" tick={{ fontSize: 10 }} />
         <YAxis
           type="number"
-          domain={[0, 100]}
+          domain={[0, 500]}
           tick={{ fontSize: 10 }}
           tickLine={false}
-          tickCount={12}
+          tickCount={20}
         />
         <Tooltip
           cursor={{ fill: `${props.hover ? props.hover : "transparent"}` }}

@@ -14,44 +14,44 @@ import "../styles/chart-style/base-chart.css";
 const data = [
   {
     name: "Sep 22",
-    "Strong buy": 300,
-    Buy: 200,
-    Hold: 200,
+    "Strong buy": 60,
+    Buy: 56,
+    Hold: 44,
     Sell: 0,
     "Strong sell": 0,
   },
   {
     name: "Oct 22",
-    "Strong buy": 250,
-    Buy: 138,
-    Hold: 221,
-    Sell: 70,
-    "Strong sell": 50,
+    "Strong buy": 95,
+    Buy: 75,
+    Hold: 62,
+    Sell: 39,
+    "Strong sell": 0,
   },
   {
     name: "Now 22",
-    "Strong buy": 200,
-    Buy: 250,
-    Hold: 229,
-    Sell: 60,
-    "Strong sell": 50,
+    "Strong buy": 100,
+    Buy: 69,
+    Hold: 50,
+    Sell: 38,
+    "Strong sell": 25,
   },
   {
     name: "Dec 22",
-    "Strong buy": 278,
-    Buy: 250,
-    Hold: 150,
-    Sell: 70,
-    "Strong sell": 0,
+    "Strong buy": 100,
+    Buy: 85,
+    Hold: 50,
+    Sell: 40,
+    "Strong sell": 20,
   },
 ];
 
 const StackedChart = () => {
   return (
-    <div className="stacked__chart">
+    <div className="stacked__chart ">
       <BarChart
         width={390}
-        height={390}
+        height={338}
         data={data}
         margin={{
           top: 0,
@@ -67,11 +67,11 @@ const StackedChart = () => {
           tick={{ fontSize: 10, color: "#8D9092" }}
         />
         <YAxis
-          tickCount={11}
+          tickCount={10}
           tickLine={false}
           axisLine={true}
           tick={{ fontSize: 10 }}
-          domain={[0, 10]}
+          domain={[0, 500]}
         />
 
         <Tooltip

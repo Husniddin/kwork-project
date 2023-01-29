@@ -14,41 +14,41 @@ const MixenChart = (props) => {
   const data = [
     {
       name: "09.29.2019",
-      Revenue: 590,
-      "Net income": 800,
+      Revenue: 240,
+      "Net income": 300,
       area: 10,
     },
     {
       name: "09.29.2020",
-      Revenue: 868,
-      "Net income": 967,
-      area: 703,
+      Revenue: 268,
+      "Net income": 367,
+      area: 203,
     },
     {
       name: "09.29.2021",
-      Revenue: 1397,
-      "Net income": 1098,
-      area: 700,
+      Revenue: 347,
+      "Net income": 398,
+      area: 200,
     },
     {
       name: "09.29.2021",
-      Revenue: 1480,
-      "Net income": 1200,
-      area: 1000,
+      Revenue: 400,
+      "Net income": 430,
+      area: 380,
     },
   ];
   return (
-    <div className="mixen__chart">
+    <div className="mixen__chart ">
       <ResponsiveContainer width={props.width} height={props.height}>
         <ComposedChart
           width={props.width}
           height={props.height}
           data={data}
           margin={{
-            top: 20,
-            right: 80,
-            bottom: 20,
-            left: -30,
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: -20,
           }}
         >
           <CartesianGrid stroke="#C9CBCD" vertical={false} />
@@ -56,10 +56,10 @@ const MixenChart = (props) => {
           <YAxis
             type="number"
             tick={{ fontSize: 10 }}
-            tickCount={12}
+            tickCount={10}
             tickLine={false}
             axisLine={true}
-            padding={{ left: -40 }}
+            domain={[0, 500]}
           />
           <Legend />
           <Bar dataKey="Revenue" barSize={18} fill="#3A9FF6" radius={3.41} />

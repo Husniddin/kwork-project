@@ -11,7 +11,7 @@ import {
 import "../styles/chart-style/base-chart.css";
 const BaseBarChart = (props) => {
   return (
-    <div className="base__bar__chart">
+    <div className="base__bar__chart ">
       <BarChart
         width={props.width}
         height={props.height}
@@ -32,10 +32,10 @@ const BaseBarChart = (props) => {
         <XAxis dataKey="name" tick={{ fontSize: 10 }} />
         <YAxis
           type="number"
-          domain={[0, 100]}
+          domain={[0, 300]}
           tick={{ fontSize: 10 }}
           tickLine={false}
-          tickCount={12}
+          tickCount={20}
         />
         <Tooltip
           cursor={{ fill: `${props.hover ? props.hover : "transparent"}` }}

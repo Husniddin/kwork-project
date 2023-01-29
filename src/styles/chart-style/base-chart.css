@@ -175,3 +175,84 @@
 .stacked__chart .legend-item-4::before {
   background: #d3212c;
 }
+
+/* RADAR CHART */
+.octagon__view .recharts-polar-radius-axis {
+  display: none;
+}
+
+/* donought chart style */
+.donought_chart .recharts-legend-wrapper {
+  bottom: 15px !important;
+}
+.donought_chart .recharts-default-legend {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  column-gap: 5px !important;
+}
+.donought_chart .legend-item-0::before,
+.donought_chart .legend-item-1::before,
+.donought_chart .legend-item-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.donought_chart .legend-item-0::before {
+  background-color: #3a9ff6;
+}
+.donought_chart .legend-item-1::before {
+  background: #02efba;
+}
+.donought_chart .legend-item-2::before {
+  background: #ff7a49;
+}
+
+/* current ratio chart */
+.current-ratio__chart .legend-item-0::before,
+.current-ratio__chart .legend-item-1::before,
+.current-ratio__chart .legend-item-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.current-ratio__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.current-ratio__chart .legend-item-1::before {
+  background: #02efba;
+}
+.current-ratio__chart .legend-item-2::before {
+  background: #ff7a49;
+}
+
+/*  estimate__chart */
+.estimate__chart .legend-item-0::before,
+.estimate__chart .legend-item-1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 19px;
+  border-radius: 4px;
+  width: 8px;
+  display: block;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.estimate__chart .legend-item-0::before {
+  background: #3a9ff6;
+}
+.estimate__chart .legend-item-1::before {
+  background: #02efba;
+}
