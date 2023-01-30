@@ -10,14 +10,24 @@ import {
 
 const OctagonChart = () => {
   const data = [
-    { name: "Financial strength", x: 0, y: 0, z: 0, m: 0, k: 0 },
-    { name: "Profitability", x: 0, y: 0, z: 0, m: 0, k: 0 },
-    { name: "Effectiveness", x: 0, y: 0, z: 0, m: 0, k: 0 },
-    { name: "Growth", x: 0, y: 0, z: 0, m: 0, k: 0 },
-    { name: "Forecast", x: 0, y: 0, z: 0, m: 0, k: 0 },
-    { name: "Valuation", x: 0, y: 0, z: 0, m: 0, k: 0 },
-    { name: "Dividend", x: 0, y: 0, z: 0, m: 0, k: 0 },
-    { name: "Economic moat", x: 0, y: 0, z: 0, m: 0, k: 0 },
+    {
+      name: "Financial strength",
+      x: 10,
+      y: 0,
+      z: 0,
+      m: 0,
+      k: 0,
+      n: 0,
+      i: 0,
+      l: 0,
+    },
+    { name: "Profitability", x: 9, y: 10, z: 0, m: 0, k: 0, n: 0, i: 0, l: 0 },
+    { name: "Effectiveness", x: 0, y: 0, z: 10, m: 0, k: 0, n: 0, i: 0, l: 0 },
+    { name: "Growth", x: 0, y: 0, z: 0, m: 0, k: 7, n: 0, i: 0, l: 0 },
+    { name: "Forecast", x: 5, y: 0, z: 0, m: 0, k: 0, n: 0, i: 0, l: 0 },
+    { name: "Valuation", x: 0, y: 7, z: 0, m: 0, k: 0, n: 0, i: 0, l: 0 },
+    { name: "Dividend", x: 0, y: 0, z: 8, m: 0, k: 0, n: 0, i: 0, l: 0 },
+    { name: "Economic moat", x: 0, y: 0, z: 0, m: 0, k: 6, n: 0, i: 0, l: 0 },
   ];
 
   return (
@@ -38,11 +48,12 @@ const OctagonChart = () => {
           <PolarRadiusAxis angle={30} color="red" tickCount={10} />
           <Radar
             dataKey="x"
-            stroke="#F9D461"
-            fill="#FFCA2D"
+            stroke="#40906E"
+            fill="#006B3D"
             fillOpacity={0.75}
             dot={true}
             legendType="square"
+            startAngle={45}
           />
           <Radar
             dataKey="y"
@@ -53,8 +64,8 @@ const OctagonChart = () => {
           />
           <Radar
             dataKey="z"
-            stroke="#67E096"
-            fill="#3CDA73"
+            stroke="#40906E"
+            fill="#006B3D"
             fillOpacity={0.75}
             dot={true}
           />
@@ -67,8 +78,8 @@ const OctagonChart = () => {
           />
           <Radar
             dataKey="k"
-            stroke="#6DE396"
-            fill="#3CDA73"
+            stroke="#3CDA73"
+            fill="#FFCA2D"
             fillOpacity={0.75}
             dot={true}
           />

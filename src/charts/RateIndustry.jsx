@@ -55,7 +55,7 @@ const RateIndustry = (props) => {
         }}
       >
         <CartesianGrid stroke="#C9CBCD" vertical={false} />
-        <XAxis dataKey="name" tick={{ fontSize: 10 }} />
+        <XAxis dataKey="name" tick={{ fontSize: 10 }} tickLine={false} />
         <YAxis
           type="number"
           tick={{ fontSize: 10 }}

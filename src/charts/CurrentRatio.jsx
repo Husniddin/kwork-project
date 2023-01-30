@@ -56,7 +56,12 @@ const CurrentRatio = (props) => {
           vertical={false}
           color="#000"
         />
-        <XAxis dataKey="name" tick={{ fontSize: 10 }} orientation="bottom" />
+        <XAxis
+          dataKey="name"
+          tick={{ fontSize: 10 }}
+          orientation="bottom"
+          tickLine={false}
+        />
         <YAxis
           type="number"
           domain={[0, 300]}

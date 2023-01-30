@@ -11,7 +11,6 @@ import CardTitle from "../component/cart-title/CardTitle";
 import FinanceTable from "../component/tables/FinanceTable";
 import HeaderNav from "../component/navbar/HeaderNav";
 import OverView from "../component/view-list/OverView";
-import ChartComponent from "../charts/ChartComponent";
 import Table from "../component/tables/Table";
 import ColsTable from "../component/tables/ColspanTable";
 import BaseBarChart from "../charts/ReBarChart";

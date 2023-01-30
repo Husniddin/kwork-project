@@ -13,22 +13,22 @@ import {
 
 const data = [
   {
-    name: "Q1 Q21",
+    name: "Q1",
     Estimate: 200,
     Actual: 190,
   },
   {
-    name: "Q2 Q21 ",
+    name: "Q2 ",
     Estimate: 140,
     Actual: 90,
   },
   {
-    name: "Q3 Q21",
+    name: "Q3",
     Estimate: 300,
     Actual: 150,
   },
   {
-    name: "Q4 Q21",
+    name: "Q4",
     Estimate: 290,
     Actual: 100,
   },
@@ -38,27 +38,27 @@ const data = [
     Actual: 320,
   },
   {
-    name: "Q2 Q22",
+    name: "Q1",
     Estimate: 140,
     Actual: 290,
   },
   {
-    name: "Q3 Q22",
+    name: "Q2",
     Estimate: 280,
     Actual: 0,
   },
   {
-    name: "Q4 Q22",
+    name: "Q3",
     Estimate: 200,
     Actual: 0,
   },
   {
-    name: "Q1 Q23",
+    name: "Q4",
     Estimate: 180,
     Actual: 0,
   },
   {
-    name: "Q2 Q23",
+    name: "Q1",
     Estimate: 350,
     Actual: 0,
   },
@@ -79,7 +79,7 @@ const EstimateActual = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 0" vertical={false} />
-        <XAxis dataKey="name" fontSize={10} />
+        <XAxis dataKey="name" fontSize={8} tickLine={false} />
         <YAxis
           fontSize={10}
           tickLine={false}
