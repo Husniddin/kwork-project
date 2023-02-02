@@ -99,6 +99,7 @@ const CurrentRatio = (props) => {
           dot={false}
         />
       </ComposedChart>
+      <span className="ratio_last_hover_effect"></span>
     </div>
   );
 };

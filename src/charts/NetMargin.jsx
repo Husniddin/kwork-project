@@ -59,6 +59,7 @@ const NetMargin = (props) => {
           strokeWidth={2}
         />
       </ComposedChart>
+      <span className="net_bar_chart_last_hover"></span>
     </div>
   );
 };

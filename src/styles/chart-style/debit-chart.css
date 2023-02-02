@@ -1,3 +1,7 @@
+.debit__chart {
+  position: relative;
+}
+
 .debit__chart .recharts-default-legend {
   display: flex !important;
   column-gap: 20px !important;
@@ -36,8 +40,8 @@
   position: absolute;
   display: block;
   top: -315px;
-  left: 40%;
-  width: 90%;
+  left: 34%;
+  width: 67px;
   height: 290px;
   background: #dcdbfc75;
   border-radius: 10.46px;
@@ -45,5 +49,56 @@
   transition: all 0.3s linear;
 }
 .debit__chart .legend-item-0:hover::after {
+  opacity: 1;
+}
+.debit__chart .legend-item-1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -315px;
+  left: -10%;
+  width: 67px;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+  z-index: 2;
+}
+.debit__chart .legend-item-1:hover::after {
+  opacity: 1;
+}
+
+.debit__chart .legend-item-2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -315px;
+  left: -45px;
+  width: 65px;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.debit__chart .legend-item-2:hover::after {
+  opacity: 1;
+}
+
+.debit__chart .last_hover_effect {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 38px;
+  width: 65px;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+  z-index: 0;
+}
+.debit__chart .last_hover_effect:hover {
   opacity: 1;
 }

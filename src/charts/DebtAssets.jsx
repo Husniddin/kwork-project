@@ -68,6 +68,7 @@ const DebtAssets = (props) => {
           dot={false}
         />
       </ComposedChart>
+      <span className="last_hover_effect"></span>
     </div>
   );
 };

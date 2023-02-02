@@ -67,6 +67,9 @@
 }
 
 /* net bar chart */
+.net__bar__chart {
+  position: relative;
+}
 .net__bar__chart .recharts-default-legend {
   display: flex !important;
   column-gap: 20px !important;
@@ -97,6 +100,71 @@
 }
 .net__bar__chart .legend-item-2::before {
   background: #ff7a49;
+}
+
+/* hover effect */
+.net__bar__chart .legend-item-0::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -300px;
+  left: 26px;
+  width: 65px;
+  height: 275px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.net__bar__chart .legend-item-0:hover::after {
+  opacity: 1;
+}
+.net__bar__chart .legend-item-1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -300px;
+  left: 19px;
+  width: 65px;
+  height: 275px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.net__bar__chart .legend-item-1:hover::after {
+  opacity: 1;
+}
+.net__bar__chart .legend-item-2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -300px;
+  left: 0px;
+  width: 65px;
+  height: 275px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.net__bar__chart .legend-item-2:hover::after {
+  opacity: 1;
+}
+.net__bar__chart .net_bar_chart_last_hover {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 24px;
+  width: 65px;
+  height: 275px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.net__bar__chart .net_bar_chart_last_hover:hover {
+  opacity: 1;
 }
 /* industry__chart */
 .industry__chart .recharts-default-legend {
@@ -137,6 +205,72 @@
   background: #ffca2d;
 }
 
+/* hover effct */
+.industry__chart .legend-item-0::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -285px;
+  left: 43px;
+  width: 65px;
+  height: 260px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.industry__chart .legend-item-0:hover::after {
+  opacity: 1;
+}
+.industry__chart .legend-item-1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -285px;
+  left: 12px;
+  width: 65px;
+  height: 260px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.industry__chart .legend-item-1:hover::after {
+  opacity: 1;
+}
+.industry__chart .legend-item-2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -285px;
+  left: 6px;
+  width: 65px;
+  height: 260px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.industry__chart .legend-item-2:hover::after {
+  opacity: 1;
+}
+
+.industry__chart .legend-item-3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -285px;
+  left: -2px;
+  width: 65px;
+  height: 260px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.industry__chart .legend-item-3:hover::after {
+  opacity: 1;
+}
 /* stacked chart */
 .stacked__chart .recharts-default-legend {
   display: flex !important;
@@ -214,6 +348,9 @@
 }
 
 /* current ratio chart */
+.current-ratio__chart {
+  position: relative;
+}
 .current-ratio__chart .legend-item-0::before,
 .current-ratio__chart .legend-item-1::before,
 .current-ratio__chart .legend-item-2::before {
@@ -236,7 +373,71 @@
 .current-ratio__chart .legend-item-2::before {
   background: #ff7a49;
 }
+/* chart fover */
+.current-ratio__chart .legend-item-0::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -315px;
+  left: 43px;
+  width: 65px;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.current-ratio__chart .legend-item-0:hover::after {
+  opacity: 1;
+}
+.current-ratio__chart .legend-item-1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -315px;
+  left: 0;
+  width: 65px;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.current-ratio__chart .legend-item-1:hover::after {
+  opacity: 1;
+}
 
+.current-ratio__chart .legend-item-2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -315px;
+  left: -58px;
+  width: 65px;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.current-ratio__chart .legend-item-2:hover::after {
+  opacity: 1;
+}
+.current-ratio__chart .ratio_last_hover_effect {
+  position: absolute;
+  display: block;
+  top: 6px;
+  right: 40px;
+  width: 65px;
+  height: 290px;
+  background: #dcdbfc75;
+  border-radius: 10.46px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.current-ratio__chart .ratio_last_hover_effect:hover {
+  opacity: 1;
+}
 /*  estimate__chart */
 .estimate__chart .legend-item-0::before,
 .estimate__chart .legend-item-1::before {
