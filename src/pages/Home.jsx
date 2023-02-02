@@ -18,7 +18,7 @@ import MixenChart from "../charts/MixenChart";
 import DebtAssets from "../charts/DebtAssets";
 import WeaknessTab from "../component/tabComponents/WeaknessTab";
 import RateIndustry from "../charts/RateIndustry";
-
+import Example from "../charts/Sinov";
 // static data
 import tableBody from "../static/finance-table";
 import tableData from "../static/table-data";
@@ -168,7 +168,7 @@ const Home = () => {
               <CardTitle title="Debt to Assets" />
             </div>
             <div className=" mt-10 pl-1">
-              <DebtAssets data={debt} height={345} width={390} />
+              <DebtAssets data={debt} height={345} width={425} />
             </div>
           </div>
           <div className="item10 grid__item">
@@ -176,7 +176,7 @@ const Home = () => {
               <CardTitle title="Current ratio" />
             </div>
             <div className=" mt-10 pl-1">
-              <CurrentRatio height={345} width={390} />
+              <CurrentRatio height={345} width={417} />
             </div>
           </div>
           <div className="item11 grid__item px-[25px]">
@@ -319,6 +319,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <Example />
       </div>
     </section>
   );

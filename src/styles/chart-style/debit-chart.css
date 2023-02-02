@@ -40,7 +40,7 @@
   position: absolute;
   display: block;
   top: -315px;
-  left: 34%;
+  left: 30%;
   width: 67px;
   height: 290px;
   background: #dcdbfc75;
@@ -56,14 +56,13 @@
   position: absolute;
   display: block;
   top: -315px;
-  left: -10%;
+  left: -14px;
   width: 67px;
   height: 290px;
   background: #dcdbfc75;
   border-radius: 10.46px;
   opacity: 0;
   transition: all 0.3s linear;
-  z-index: 2;
 }
 .debit__chart .legend-item-1:hover::after {
   opacity: 1;
@@ -74,7 +73,7 @@
   position: absolute;
   display: block;
   top: -315px;
-  left: -45px;
+  left: -62px;
   width: 65px;
   height: 290px;
   background: #dcdbfc75;
@@ -90,7 +89,7 @@
   position: absolute;
   display: block;
   top: 5px;
-  right: 38px;
+  right: 60px;
   width: 65px;
   height: 290px;
   background: #dcdbfc75;

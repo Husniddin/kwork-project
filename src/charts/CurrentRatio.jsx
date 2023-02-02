@@ -63,10 +63,20 @@ const CurrentRatio = (props) => {
           tickLine={false}
         />
         <YAxis
-          type="number"
+          yAxisId="left"
+          orientation="left"
           domain={[0, 300]}
           tick={{ fontSize: 10 }}
           tickLine={false}
+          tickCount={20}
+        />
+        <YAxis
+          yAxisId="right"
+          orientation="right"
+          domain={[0, 300]}
+          tick={{ fontSize: 10 }}
+          tickLine={false}
+          axisLine={false}
           tickCount={20}
         />
         <Tooltip
@@ -78,20 +88,22 @@ const CurrentRatio = (props) => {
           }}
         />
         <Legend verticalAlign="bottom" />
-        <ReferenceLine y={0} stroke="#000" />
         <Bar
+          yAxisId="left"
           dataKey="Current Assets"
           fill="#3A9FF6"
           radius={3.6}
           barSize={18}
         />
         <Bar
+          yAxisId="right"
           dataKey="Current lliabilities"
           fill="#02EFBA"
           radius={3.6}
           barSize={18}
         />
         <Line
+          yAxisId="right"
           type="linear"
           dataKey="Current ratio"
           stroke=" #FF7A49"

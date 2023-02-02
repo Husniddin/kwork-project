@@ -18,10 +18,10 @@ const DebtAssets = (props) => {
         height={props.height}
         data={props.data}
         margin={{
-          top: 4,
+          top: 0,
           right: 0,
           left: -10,
-          bottom: 0,
+          bottom: 5,
         }}
       >
         <CartesianGrid
@@ -32,16 +32,28 @@ const DebtAssets = (props) => {
         />
         <XAxis
           dataKey="name"
-          tick={{ fontSize: 10 }}
           orientation="bottom"
           tickLine={false}
+          tick={{ fontSize: 10 }}
         />
         <YAxis
-          type="number"
-          domain={[0, 300]}
+          yAxisId="left"
+          orientation="left"
+          stroke="#8D9092"
           tick={{ fontSize: 10 }}
           tickLine={false}
+          domain={[0, 300]}
           tickCount={20}
+        />
+        <YAxis
+          yAxisId="right"
+          orientation="right"
+          stroke="#8D9092"
+          tick={{ fontSize: 10 }}
+          tickLine={false}
+          domain={[0, 300]}
+          tickCount={20}
+          axisLine={false}
         />
         <Tooltip
           cursor={{ fill: `${props.hover ? props.hover : "#DCDBFC75"}` }}
@@ -52,22 +64,29 @@ const DebtAssets = (props) => {
           }}
         />
         <Legend verticalAlign="bottom" />
-        <ReferenceLine y={0} stroke="#000" />
-        <Bar dataKey="Total Assets" fill="#3A9FF6" radius={3.6} barSize={18} />
         <Bar
+          yAxisId="left"
+          dataKey="Total Assets"
+          fill="#3A9FF6"
+          radius={3.6}
+          barSize={18}
+        />
+        <Bar
+          yAxisId="right"
           dataKey="Debt to Assets"
           fill="#02EFBA"
           radius={3.6}
           barSize={18}
         />
         <Line
-          type="linear"
+          yAxisId="right"
           dataKey="Total Debt"
           stroke=" #FF7A49"
           strokeWidth={2}
           dot={false}
         />
       </ComposedChart>
+
       <span className="last_hover_effect"></span>
     </div>
   );
