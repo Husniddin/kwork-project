@@ -71,6 +71,7 @@ const MixenChart = (props) => {
             stroke="#FF7A49"
             strokeWidth={2}
             offset={0}
+            type="linear"
           />
           <Tooltip
             cursor={{ fill: "transparent" }}

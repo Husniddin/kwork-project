@@ -19,6 +19,8 @@ import DebtAssets from "../charts/DebtAssets";
 import WeaknessTab from "../component/tabComponents/WeaknessTab";
 import RateIndustry from "../charts/RateIndustry";
 import Example from "../charts/Sinov";
+import PineChartCustom from "../charts/PineChartCustom";
+
 // static data
 import tableBody from "../static/finance-table";
 import tableData from "../static/table-data";
@@ -35,7 +37,6 @@ import StackedChart from "../charts/StackedChart";
 import EstimateActual from "../charts/EstimateActual";
 import OctagonChart from "../charts/RadarChart";
 import CurrentRatio from "../charts/CurrentRatio";
-import DonougthChart from "../charts/DonougthChart";
 
 const Home = () => {
   return (
@@ -69,7 +70,7 @@ const Home = () => {
         </div>
         <HeaderNav />
         <div className="grid__system overflow-hidden">
-          <div className="item1 grid__item px-[25px] pb-[34px]">
+          <div className="item1 grid__item px-[25px] pb-[34px] max-h-[442px]">
             <CardTitle title="About the company" />
             <div className="flex gap-[50px] mt-[25px] ">
               <p className="w-[52.5%] text-[12px] leading-[22px] text-black">
@@ -111,50 +112,51 @@ const Home = () => {
             <div className="px-[25px]">
               <CardTitle title="REVENUE BREAKDOWN" />
             </div>
-            <DonougthChart />
+            <PineChartCustom />
           </div>
           {/* end of item2 */}
-          <div className="item3 grid__item pl-[25px] pr-[38px]">
+          <div className="item3 grid__item pl-[25px] pr-[38px] max-h-[564px]">
             <CardTitle title="Overview" />
-            <div className="mt-[33px] over__view">
+            <div className="mt-[16px] over__view">
               {overView.map((item) => (
                 <OverView
                   key={item.id}
                   text={item.name}
                   quantity={item.data}
+                  bottomSpace="9.5px"
                   context_width="30%"
                 />
               ))}
             </div>
           </div>
           {/* end of item3 */}
-          <div className="item4 grid__item px-[25px]">
+          <div className="item4 grid__item px-[25px] max-h-[564px]">
             <div className="mb-[15px]">
               <CardTitle title="Chart" />
             </div>
             <img src={chartImg} alt="chart img" className="h-[90%]" />
           </div>
           {/* end of item4 */}
-          <div className="item5 grid__item px-[25px]">
+          <div className="item5 grid__item px-[25px] max-h-[442px]">
             <CardTitle title="OVERALL SCORE" />
           </div>
           {/* end of item5 */}
-          <div className="item6 grid__item px-[25px]">
+          <div className="item6 grid__item px-[25px] max-h-[442px]">
             <CardTitle title="Octagon view" />
             <div>
               <OctagonChart />
             </div>
           </div>
           {/* end of item6 */}
-          <div className="item7 grid__item px-[25px]">
+          <div className="item7 grid__item px-[25px] max-h-[442px]">
             <CardTitle title="strength & weakness" />
             <WeaknessTab />
             {/* end of tab */}
           </div>
           {/* end of item7 */}
-          <div className="item8 grid__item pl-[25px] !pr-[23px]">
+          <div className="item8 grid__item pl-[25px] !pr-[23px] max-h-[468px]">
             <CardTitle title="FINANCIAL STRENGTH" />
-            <div className="mt-11">
+            <div className="mt-10">
               <FinanceTable
                 table_header={tableBody.table_head}
                 table_body={tableBody.table_body}
@@ -163,7 +165,7 @@ const Home = () => {
             </div>
           </div>
           {/* end of item8 */}
-          <div className="item9 grid__item">
+          <div className="item9 grid__item max-h-[468px]">
             <div className="px-[25px]">
               <CardTitle title="Debt to Assets" />
             </div>
@@ -171,7 +173,7 @@ const Home = () => {
               <DebtAssets data={debt} height={345} width={425} />
             </div>
           </div>
-          <div className="item10 grid__item">
+          <div className="item10 grid__item max-h-[468px]">
             <div className="px-[25px]">
               <CardTitle title="Current ratio" />
             </div>
@@ -179,7 +181,7 @@ const Home = () => {
               <CurrentRatio height={345} width={417} />
             </div>
           </div>
-          <div className="item11 grid__item px-[25px]">
+          <div className="item11 grid__item px-[25px] max-h-[468px]">
             <div className="flex items-center justify-between">
               <CardTitle title="Current ratio" />
               <div>
@@ -201,7 +203,7 @@ const Home = () => {
                   title="Income statement"
                   className="text-[10px]  leading-[15px] text-lightBlue"
                 >
-                  <div className="mt-[35px]">
+                  <div className="mt-[30px]">
                     <Table
                       table_header={tableData.table_header}
                       table_body={tableData.tabel_body}
@@ -225,7 +227,7 @@ const Home = () => {
             {/* end of tab header*/}
           </div>
           {/* end of item11 */}
-          <div className="item12 grid__item ">
+          <div className="item12 grid__item max-h-[468px]">
             <div className="px-[25px] ">
               <CardTitle title="Revenue & Net income" />
             </div>
@@ -234,17 +236,17 @@ const Home = () => {
             </div>
           </div>
           {/* end of item12 */}
-          <div className="item13 grid__item ">
+          <div className="item13 grid__item max-h-[468px]">
             <div className="px-[25px]">
               <CardTitle title="Cash flow" />
             </div>
-            <div className="pl-[10px] mt-11">
+            <div className="pl-[10px] mt-10">
               <BaseBarChart width={390} height={345} data={data} />
             </div>
           </div>
-          <div className="item14 grid__item px-[25px]">
+          <div className="item14 grid__item px-[25px] max-h-[468px]">
             <CardTitle title="PROFITABILITY" />
-            <div className="mt-11">
+            <div className="mt-10">
               <FinanceTable
                 table_header={tableBody.table_head}
                 table_body={tableBody.table_body}
@@ -252,7 +254,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item15 grid__item">
+          <div className="item15 grid__item max-h-[468px]">
             <div className="px-[25px]">
               <CardTitle title="MARGIN RATIOS" />
             </div>
@@ -260,17 +262,17 @@ const Home = () => {
               <BaseLineChart data={marginRatio} width={390} height={334} />
             </div>
           </div>
-          <div className="item16 grid__item">
+          <div className="item16 grid__item max-h-[468px]">
             <div className="px-[25px]">
               <CardTitle title="NET MARGIN" />
             </div>
-            <div className="mt-11">
+            <div className="mt-10">
               <NetMargin data={marginData} width={420} height={334} />
             </div>
           </div>
-          <div className="item17 grid__item px-[25px]">
+          <div className="item17 grid__item px-[25px] max-h-[468px]">
             <CardTitle title="EFFECTIVENESS" />
-            <div className="mt-11">
+            <div className="mt-10">
               <FinanceTable
                 table_header={tableBody.table_head}
                 table_body={tableBody.table_body}
@@ -278,9 +280,9 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item18 grid__item px-[25px]">
+          <div className="item18 grid__item px-[25px] max-h-[468px]">
             <CardTitle title="GROWTH" />
-            <div className="mt-11">
+            <div className="mt-10">
               <FinanceTable
                 table_header={tableBody.table_head}
                 table_body={tableBody.table_body}
@@ -288,25 +290,25 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="item19 grid__item ">
+          <div className="item19 grid__item max-h-[468px]">
             <div className="px-[25px]">
               <CardTitle title="Growth rate vs. Industry" />
             </div>
-            <div className="mt-11 pl-1">
+            <div className="mt-10 pl-1">
               <RateIndustry width={390} height={334} />
             </div>
           </div>
-          <div className="item20 grid__item px-[25px]">
+          <div className="item20 grid__item px-[25px] max-h-[468px]">
             <CardTitle title="FORECAST" />
-            <div className="mt-11">
+            <div className="mt-10">
               <ColsTable />
             </div>
           </div>
-          <div className="item21 grid__item  ">
+          <div className="item21 grid__item  max-h-[468px]">
             <div className="px-[25px]">
               <CardTitle title="Estimated EPS vs. Actual EPS" />
             </div>
-            <div className="mt-11 !h-[400px]">
+            <div className="mt-10 !h-[400px]">
               <EstimateActual />
             </div>
           </div>

@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  LabelList,
   ResponsiveContainer,
 } from "recharts";
 import "../styles/chart-style/base-chart.css";
@@ -45,7 +46,13 @@ const data = [
     "Strong sell": 20,
   },
 ];
-
+const valueAccessor =
+  (attribute) =>
+  ({ payload }) => {
+    console.log("payload", payload);
+    console.log("atribute", attribute);
+    return payload[attribute];
+  };
 const StackedChart = () => {
   return (
     <div className="stacked__chart ">
@@ -89,41 +96,71 @@ const StackedChart = () => {
           stackId="a"
           fill="#006B3D"
           radius={[3, 3, 0, 0]}
-          label={{ position: "insideTop", fill: "#fff", fontSize: "10px" }}
           barSize={49}
-        />
+        >
+          <LabelList
+            valueAccessor={valueAccessor("Strong buy")}
+            fill="#fff"
+            fontSize="10px"
+            position="insideTop"
+          />
+        </Bar>
         <Bar
           dataKey="Buy"
           stackId="a"
           fill="#3CDA73"
           radius={[3, 3, 0, 0]}
-          label={{ position: "insideTop", fill: "#fff", fontSize: "10px" }}
           barSize={49}
-        />
+        >
+          <LabelList
+            valueAccessor={valueAccessor("Buy")}
+            fill="#fff"
+            fontSize="10px"
+            position="insideTop"
+          />
+        </Bar>
         <Bar
           dataKey="Hold"
           stackId="a"
           fill="#FFCA2D"
           radius={[3, 3, 0, 0]}
-          label={{ position: "insideTop", fill: "#fff", fontSize: "10px" }}
           barSize={49}
-        />
+        >
+          <LabelList
+            valueAccessor={valueAccessor("Hold")}
+            fill="#fff"
+            fontSize="10px"
+            position="insideTop"
+          />
+        </Bar>
         <Bar
           dataKey="Sell"
           stackId="a"
           fill="#FF7A49"
           radius={[3, 3, 0, 0]}
-          label={{ position: "insideTop", fill: "#fff", fontSize: "10px" }}
           barSize={49}
-        />
+        >
+          <LabelList
+            valueAccessor={valueAccessor("Sell")}
+            fill="#fff"
+            fontSize="10px"
+            position="insideTop"
+          />
+        </Bar>
         <Bar
           dataKey="Strong sell"
           stackId="a"
           fill="#D3212C"
           radius={[3, 3, 0, 0]}
-          label={{ position: "insideTop", fill: "#fff", fontSize: "10px" }}
           barSize={49}
-        />
+        >
+          <LabelList
+            valueAccessor={valueAccessor("Strong sell")}
+            fill="#fff"
+            fontSize="10px"
+            position="insideTop"
+          />
+        </Bar>
       </BarChart>
     </div>
   );

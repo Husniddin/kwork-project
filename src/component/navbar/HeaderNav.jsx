@@ -15,7 +15,7 @@ const HeaderNav = () => {
           data-num="1"
           onClick={(e) => handleClick(e)}
         >
-          News
+          SUMMARY
         </a>
       </li>
       <li>
@@ -25,7 +25,7 @@ const HeaderNav = () => {
           data-num="2"
           onClick={(e) => handleClick(e)}
         >
-          Chart
+          News
         </a>
       </li>
       <li>
@@ -35,7 +35,7 @@ const HeaderNav = () => {
           data-num="3"
           onClick={(e) => handleClick(e)}
         >
-          Financials
+          Chart
         </a>
       </li>
       <li>
@@ -45,7 +45,7 @@ const HeaderNav = () => {
           data-num="4"
           onClick={(e) => handleClick(e)}
         >
-          Dividends
+          Financials
         </a>
       </li>
       <li>
@@ -55,7 +55,7 @@ const HeaderNav = () => {
           data-num="5"
           onClick={(e) => handleClick(e)}
         >
-          Forecast
+          Dividends
         </a>
       </li>
       <li>
@@ -65,7 +65,7 @@ const HeaderNav = () => {
           data-num="6"
           onClick={(e) => handleClick(e)}
         >
-          Ownership
+          Forecast
         </a>
       </li>
       <li>
@@ -73,6 +73,16 @@ const HeaderNav = () => {
           href="#"
           className={number == 7 ? "stock__nav active__nav" : "stock__nav"}
           data-num="7"
+          onClick={(e) => handleClick(e)}
+        >
+          Ownership
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+          className={number == 8 ? "stock__nav active__nav" : "stock__nav"}
+          data-num="8"
           onClick={(e) => handleClick(e)}
         >
           Profile

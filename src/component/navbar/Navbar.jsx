@@ -27,6 +27,14 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
+                to="/news"
+                className="text-base text-black font-medium leading-[19px]"
+              >
+                News
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/screen"
                 className="text-base text-black font-medium leading-[19px]"
               >

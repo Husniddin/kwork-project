@@ -7,7 +7,7 @@ const Table = (props) => {
           {props.table_header.map((item, i) => (
             <th
               key={i}
-              className="text-center text-white text-[12px] font-bold leading-[14px] py-[16.5px]"
+              className="text-center text-white text-[12px] font-bold leading-[14px] py-[14.5px]"
             >
               {item}
             </th>
@@ -20,7 +20,7 @@ const Table = (props) => {
             {items.map((item, k) => (
               <td
                 key={k}
-                className="text-[12px] text-textDarkBlack leading-[19px] text-center p-4 border-[0.2px]"
+                className="text-[12px] text-textDarkBlack leading-[19px] text-center px-4 py-[13px]  border-[0.2px]"
               >
                 {item}
               </td>
