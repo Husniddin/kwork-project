@@ -28,7 +28,9 @@
 .item11,
 .item14,
 .item17,
-.item20 {
+.item20,
+.item23,
+.item26 {
   grid-column: 1/5;
 }
 .item6,
@@ -36,7 +38,9 @@
 .item12,
 .item15,
 .item18,
-.item21 {
+.item21,
+.item24,
+.item27 {
   grid-column: 5/9;
 }
 .item7,
@@ -44,7 +48,9 @@
 .item13,
 .item16,
 .item19,
-.item22 {
+.item22,
+.item25,
+.item28 {
   grid-column: 9/13;
 }
 .item20,
@@ -153,12 +159,6 @@
   top: 0;
   color: #746ff2;
 }
-
-/* .strengs__tab li:last-child::after {
-  content: "\203a";
-  display: block;
-  position: absolute;
-  bottom: -7px;
-  left: -2px;
-  font-size: 23px;
-} */
+.model__overwiev:last-child div span {
+  color: "#FF2A3A" !important;
+}

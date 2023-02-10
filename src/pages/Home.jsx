@@ -18,7 +18,8 @@ import MixenChart from "../charts/MixenChart";
 import DebtAssets from "../charts/DebtAssets";
 import WeaknessTab from "../component/tabComponents/WeaknessTab";
 import RateIndustry from "../charts/RateIndustry";
-import Example from "../charts/Sinov";
+// import Example from "../charts/Sinov";
+import Example from "../charts/SpeedChart";
 import PineChartCustom from "../charts/PineChartCustom";
 
 // static data
@@ -37,6 +38,9 @@ import StackedChart from "../charts/StackedChart";
 import EstimateActual from "../charts/EstimateActual";
 import OctagonChart from "../charts/RadarChart";
 import CurrentRatio from "../charts/CurrentRatio";
+import model from "../static/dfcModel.js";
+import DividentPayment from "../charts/DividenPayment";
+import EconomicMoat from "../component/tables/EconimicMoat";
 
 const Home = () => {
   return (
@@ -320,8 +324,68 @@ const Home = () => {
               <StackedChart />
             </div>
           </div>
+          <div className="item23 grid__item">
+            <div className="ml-[25px]">
+              <CardTitle title="valuation" />
+            </div>
+            <div className="mt-11 px-[3px]">
+              {/* <StackedChart /> */}
+              <FinanceTable
+                table_header={tableBody.table_head}
+                table_body={tableBody.table_body}
+                table__footer={tableBody.table_footer}
+              />
+            </div>
+          </div>
+          <div className="item24 grid__item">
+            <div className="ml-[25px]">
+              <CardTitle title="DCF Model" />
+            </div>
+            <div className="mt-11 pl-[25px] pr-[30px]">
+              {model.map((item, i) => (
+                <div key={i} className="model__overwiev">
+                  <OverView
+                    text={item.title}
+                    quantity={item.qty}
+                    bottomSpace="18px"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="item25 grid__item">
+            <div className="ml-[25px]">
+              <CardTitle title="fair value" />
+            </div>
+            <div className="mt-11 px-[3px]">
+              <Example />
+            </div>
+          </div>
+          <div className="item26 grid__item">
+            <div className="ml-[25px]">
+              <CardTitle title="dividend" />
+            </div>
+            <div className="mt-11 px-[3px]">{/* <ColsTable /> */}</div>
+          </div>
+          <div className="item27 grid__item">
+            <div className="ml-[25px]">
+              <CardTitle title="dividend payments" />
+            </div>
+            <div className="mt-11 px-[3px]">
+              <DividentPayment />
+            </div>
+          </div>
+          <div className="item28 grid__item">
+            <div className="ml-[25px]">
+              <CardTitle title="economic moat" />
+            </div>
+            <div className="mt-11 px-[3px]">
+              <EconomicMoat />
+            </div>
+          </div>
         </div>
-        <Example />
+        {/* <Example /> */}
+        {/* <Example /> */}
       </div>
     </section>
   );

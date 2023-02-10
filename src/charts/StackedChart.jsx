@@ -49,8 +49,6 @@ const data = [
 const valueAccessor =
   (attribute) =>
   ({ payload }) => {
-    console.log("payload", payload);
-    console.log("atribute", attribute);
     return payload[attribute];
   };
 const StackedChart = () => {
